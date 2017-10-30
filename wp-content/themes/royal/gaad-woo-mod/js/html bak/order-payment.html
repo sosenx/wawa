@@ -1,0 +1,35 @@
+<div class="payment-wrap">
+
+{{ checkPayment() }}
+
+<div v-if="processing_payment()" class="payment-totals">
+
+
+			<div class="totals">
+				
+				<div class="tr gross-total">
+					<div class="l">Przetwarzanie płatności</div>
+					<div class="v"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>
+				</div>
+				
+			</div>	
+
+
+</div> 
+
+
+
+
+<div v-if="payment_ok()" class="payment-totals">
+	<div class="totals">
+				
+				<div class="tr gross-total">
+					<div class="l">Zapłacono</div>
+					<div class="v"><i class="fa fa-check-square-o" aria-hidden="true"></i></div>
+				</div>
+				
+			</div>	
+	
+</div> 
+
+</div>

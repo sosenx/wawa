@@ -1,0 +1,113 @@
+/* CSS Document */
+/* line 8, product-crosssell.scss */
+#product-cross-sell-app .header {
+  margin-bottom: 2rem;
+}
+/* line 13, product-crosssell.scss */
+#product-cross-sell-app ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+/* line 19, product-crosssell.scss */
+#product-cross-sell-app ul li {
+  width: 30%;
+  position: relative;
+}
+/* line 25, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product {
+  background-color: #f1eee9;
+  padding: 2rem;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 3rem;
+  flex-direction: column;
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  transition: all .3s;
+  padding-top: 6rem;
+  margin-bottom: 3rem;
+}
+/* line 38, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product > a {
+  text-align: center;
+}
+/* line 42, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product h4 {
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+  position: absolute;
+  top: 1rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+/* line 55, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product .price-wrap {
+  position: absolute;
+  right: -1rem;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  z-index: 1000;
+  background-color: #ff6600;
+  color: white;
+  bottom: 3rem;
+  transition: all .3s;
+}
+/* line 66, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product .price-wrap .price_prefix {
+  font-size: 1.1rem;
+}
+/* line 70, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product .price-wrap .price_price {
+  font-weight: bold;
+}
+/* line 74, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product .price-wrap .price_sufix {
+  font-size: 1.1rem;
+}
+/* line 78, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product .price-wrap i {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  color: #f2eee9;
+  transform: translate(-1.5rem, -0.1rem);
+  z-index: 10001;
+  position: relative;
+  font-size: 1.1rem;
+}
+/* line 87, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product .price-wrap:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 2rem 2rem 2rem 0;
+  border-color: transparent #ff6600;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -2rem;
+  top: 0;
+}
+/* line 102, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product:hover {
+  align-items: center !important;
+}
+/* line 106, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product:hover .price-wrap {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  border-radius: 0;
+  text-align: center;
+}
+/* line 114, product-crosssell.scss */
+#product-cross-sell-app .crosssell-product:hover .price-wrap:after {
+  display: none !important;
+}
+
+/*# sourceMappingURL=product-crosssell.css.map */

@@ -1,0 +1,192 @@
+/* CSS Document */
+
+.body{
+	background-color: #f1eee9;
+	width:100%;
+} 
+
+table {
+	
+	background-color: #f1eee9;
+	
+	width : 860px;
+	margin: 0 auto;
+	
+	.product_thumbnail{
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	
+	.go-to-product-btn{
+		background-color: #FF6600;
+		padding: 15px 28px ;
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		font-size: 22px;
+		font-wight: bold;
+		margin: 20px auto 20px;
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	
+	td {
+		font-size: 17px;
+		line-height: 22px;
+		
+		color: #333;
+		
+	}
+	
+	
+	.header{		
+		
+		
+		
+		.logo {
+			
+			img{
+				marign: 0 auto;
+				margin: 10px 0 30px 10px;
+			}
+		}
+		
+		.company-data{
+			font-size: 14px;
+			text-align: right;
+			color: #444;
+			padding-left: 15px;		
+			
+			p{
+				margin: 0 10px 0 0;				
+			}
+			
+			.company-name{
+				font-size: 15px
+			}
+			
+		}
+		
+		.hr{
+			width: 80%;
+			border-bottom: 1px solid #999;
+			margin: 5px 10px 4px 0;
+			display: inline-block;
+			
+		}  
+		
+	}
+	
+	.product-attributes{		
+		
+		ul {
+			li{
+				list-style: none;
+				
+				> * {
+					width: 45%;
+					font-size: 14px;
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
+		}
+		
+		
+		
+		.attr-label{
+			color: #414141;			
+			
+			font-weight: bold;
+		}
+		
+		.attr-value{
+			color: #333;
+			
+			
+		}
+		
+	}	
+	
+
+	
+	.text{
+		
+		h1{
+			font-weight: bold;		
+			font-size: 22px;		
+			line-height: 27px;	
+			margin-left: 10px;	
+			margin-bottom: 5px;	
+			padding-bottom: 0;	
+			
+		}
+		
+		p{
+			margin-left: 10px;	
+		}
+		
+	}
+	
+
+	p {
+		
+		margin-bottom: 10px;
+	}
+	
+	.product-title {
+		h2{
+			
+			font-size: 30px;
+			margin-top: 20px;
+			margin-left: 10px;
+			
+			
+		}
+	}
+	
+	.price-wrap{
+		position: relative;
+		margin-left: 24px;
+		padding: 1rem;
+		color: #111;
+
+		.price_prefix{
+			font-size: 1.1rem;								
+		}
+
+		.price_price{
+			font-weight: bold;
+			font-size: 31px;			
+		}
+
+		.price_sufix{
+			font-size: 1.1rem;	
+		}
+
+		i{
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+			color: #f2eee9;
+			transform: translate( -1.5rem, -0.1rem );
+			z-index: 10001;
+			position: relative;
+			font-size: 1.1rem;	
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			border-style: solid;
+			border-width: 2rem 2rem 2rem 0;
+			border-color: transparent #ff6600;
+			display: block;
+			width: 0;
+			z-index: 1;
+			left: -2rem;
+			top: 0;
+		}
+
+	}
+}
+ 

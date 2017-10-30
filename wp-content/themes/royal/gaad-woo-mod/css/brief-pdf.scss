@@ -1,0 +1,121 @@
+/* CSS Document */
+
+
+
+
+.production-process{
+  width:192mm;  
+  border:1px solid gray;
+  
+  
+  h3{
+    text-align: center;
+    line-height: 15mm;
+    font-size: 13pt;
+  }
+  
+  td{
+    line-height: 5mm;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+  
+}
+
+
+.product-attributes-list-table {
+  width:192mm;
+   border:1px solid gray;
+ 
+  
+  .header-title{
+    h3{
+      line-height: 20mm;
+      font-size: 16pt;
+      text-align: center;
+      font-weight: bold;
+    }  
+  }
+  
+  tr.regular-line{
+    td{
+      line-height: 4mm;
+    }
+  }
+  
+  
+}
+
+.brief-header-table{  
+  width:192mm;
+  
+  
+  
+  .header-title{
+    h3{
+      line-height: 20mm;
+      font-size: 20pt;
+      text-align: center;
+      font-weight: bold;
+    }  
+  }
+  
+  .header-tr{
+    .order-id, .item-name{
+      
+      line-height: 12mm;
+      font-size: 14pt;
+      text-align: center;
+      border: 2mm solid white;
+    }
+    
+  }
+  
+  
+}
+
+
+
+table.header-info{
+  width:100%; 
+  
+  .header-tr{
+    .wawa-logo{
+      width: 30mm;
+      height: auto;
+    }
+    
+    td{
+      background-color: #ff6600;
+      color: white;
+    }
+  }
+  
+  .item-name{
+    display: block;
+    
+  }
+  
+}
+
+
+table.kontrahent-data{  
+  border:1px solid gray;
+  margin-top: 3mm;
+  
+  tr{
+    td{
+      line-height: 5mm;
+      
+      &:first-child{
+        width:25%;
+      } 
+      
+      &:last-child{
+        width:75%;
+      } 
+      
+    }    
+  }
+  
+}

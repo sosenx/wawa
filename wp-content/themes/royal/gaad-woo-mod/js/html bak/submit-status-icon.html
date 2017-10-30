@@ -1,0 +1,13 @@
+<div class="submit-status-icon">
+	
+	<div v-if="status" class="status-icon status-ok">
+		<i class="fa fa-check-circle" aria-hidden="true"></i>
+		<span>Wszystko sprawdzone, możesz kontynułować.</span>
+	</div>
+	
+	<div v-if="!status" class="status-icon status-error ">
+		<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+		<span>Zamówienie nie może być kontunułowane. Sprawdź pliki.</span>
+	</div>
+
+</div>

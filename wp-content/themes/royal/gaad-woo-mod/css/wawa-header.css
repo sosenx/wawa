@@ -1,0 +1,69 @@
+/* CSS Document */
+/* line 2, wawa-header.scss */
+.wawa-header {
+  border-bottom: 1px solid lightgray;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+/* line 14, wawa-header.scss */
+.wawa-header .header-logo img {
+  max-height: 4.2rem;
+}
+/* line 22, wawa-header.scss */
+.wawa-header .tmenu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* line 27, wawa-header.scss */
+.wawa-header .tmenu ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* line 32, wawa-header.scss */
+.wawa-header .tmenu ul li {
+  padding-left: 1.4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* line 38, wawa-header.scss */
+.wawa-header .tmenu ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 43, wawa-header.scss */
+.wawa-header .tmenu ul li a i {
+  padding-right: .4rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* line 52, wawa-header.scss */
+.wawa-header .tmenu ul li a span {
+  font-size: 1.5rem;
+}
+/* line 57, wawa-header.scss */
+.wawa-header .tmenu ul li a .user-login {
+  padding-left: 1rem;
+}
+/* line 60, wawa-header.scss */
+.wawa-header .tmenu ul li a .user-log-out {
+  padding-left: 1rem;
+}
+/* line 63, wawa-header.scss */
+.wawa-header .tmenu ul li a .user-log-out i {
+  color: rgba(0, 0, 0, 0.4);
+}
+/* line 69, wawa-header.scss */
+.wawa-header .tmenu ul li a:hover i, .wawa-header .tmenu ul li a:hover span {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/*# sourceMappingURL=wawa-header.css.map */

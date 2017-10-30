@@ -1,0 +1,27 @@
+<div class="product-description">
+	
+	<div v-if="visible">
+		
+		<h3>Opis produktu: {{ getTitle_c2a( post.post_title ) }}</h3>
+			
+		<img :src="data.thumbnail_url" class="product-thumb">
+		<span class="post-content" v-html="post.post_content"></span>
+		
+		
+		<div class="c2a-order-bar">
+		  
+		  <div class="c2a-info">
+        <h4>Twoje {{ getTitle_c2a( post.post_title ) }} z dostawą w 48h!</h4>
+        <p>Nie zwklekaj, zamów teraz!</p>
+		  </div>
+      
+      <div class="back-to-variations">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+        <span @click="gotoParams()">Przejdź do konfiguratora</span>
+      </div>
+		  
+		</div>
+		
+	</div> 	
+	
+</div> 	

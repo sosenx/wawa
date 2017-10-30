@@ -1,0 +1,70 @@
+/* CSS Document */
+.tabs-content{
+	background: white;
+    margin-left: 0;
+    margin-right: 0;
+      
+  padding-top: 3rem;
+	padding-bottom: 4rem;
+	 
+  
+  
+  
+  
+  
+    border-top: none;
+	margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+	.calculations-row {
+
+		.header {
+			padding-bottom: 1rem;			
+			margin-bottom: 1rem;
+
+			.lp{
+				background: #ff6600;
+				/*border-radius: 100rem;*/
+				width: 3rem;
+				height: 3rem; 
+				justify-content: center;
+				align-items: center;
+				display: inline-flex;
+				color: white;
+				font-weight: bold;
+				text-shadow: 1px 1px 1px #666;
+			}
+
+			.label {
+				font-size: 1.5rem;
+				font-weight: normal;
+				color : #333;
+			}
+		}
+
+
+	}
+  
+  
+  .nakladyapp-col{
+    
+    &.is_visible{
+      padding-top: 2rem;
+      background-color: rgba(0,0,0,0.1);
+    }
+  }
+  
+  
+  .variations_form-col, .productSummaryApp-col{
+    
+    &.is_visible{
+      padding-top: 2rem;  
+    }
+  }
+  
+  
+  
+  
+  
+  
+}

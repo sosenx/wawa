@@ -1,0 +1,61 @@
+<div id="summary-attr-ksiazka" class="summary-attr-ksiazka">
+
+    
+    
+  <h4>Podstawowe parametry</h4>  
+   <ul >
+    <li v-for="(attr_name, key, index) in ov['basic-info']" 
+        v-if="typeof ov == 'object'"
+    >    
+      <span class="l">{{attr_name.label}}</span>
+      <span class="v">{{attr_name.val }} </span>
+    </li>
+
+  </ul>    
+    
+  <h4>Okładka</h4>  
+   <ul >
+    <li v-for="(attr_name, key, index) in ov['cover-info']" 
+        v-if="typeof ov == 'object'"
+    >    
+      <span class="l">{{attr_name.label}}</span>
+      <span class="v">{{attr_name.val }} </span>
+    </li>
+
+  </ul>    
+    
+  <h4 v-if="typeof ov == 'object' && typeof ov['bw-info'] !== 'undefined' && ov['bw-info'].length > 0">Druk monochromatyczny</h4>  
+   <ul >
+    <li v-for="(attr_name, key, index) in ov['bw-info']" 
+        v-if="typeof ov == 'object' && typeof ov['bw-info'] !== 'undefined' && ov['bw-info'].length > 0"
+    >    
+      <span class="l">{{attr_name.label}}</span>
+      <span class="v">{{attr_name.val }} </span>
+    </li>
+
+  </ul>    
+    
+  <h4 v-if="typeof ov == 'object' && typeof ov['color-info'] !== 'undefined' && ov['color-info'].length > 0">Druk kolorowy</h4>  
+   <ul >
+    <li v-for="(attr_name, key, index) in ov['color-info']" 
+        v-if="typeof ov == 'object' && typeof ov['color-info'] !== 'undefined' && ov['color-info'].length > 0"
+    >    
+      <span class="l">{{attr_name.label}}</span>
+      <span class="v">{{attr_name.val }} </span>
+    </li>
+
+  </ul>    
+    
+  <h4 v-if="typeof ov == 'object' && typeof ov['extended-info'] !== 'undefined' && ov['extended-info'].length > 0">Informacje uzupełniające</h4>  
+   <ul >
+    <li v-for="(attr_name, key, index) in ov['extended-info']" 
+        v-if="typeof ov == 'object' && typeof ov['extended-info'] !== 'undefined' && ov['extended-info'].length > 0"
+    >    
+      <span class="l">{{attr_name.label}}</span>
+      <span class="v">{{attr_name.val }} </span>
+    </li>
+
+  </ul>
+ 
+  
+</div>

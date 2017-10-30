@@ -1,0 +1,162 @@
+/* CSS Document */
+
+.nakladyapp{
+  position: relative;
+  
+	td{
+		text-align: center;
+		padding-top: 0.5rem;
+    	padding-bottom: 0.5rem;
+	}
+	
+  .icon-labels{
+    td{
+    padding-bottom: 1.4rem;
+  }
+
+  .standard{		
+    .fa-stack{		
+      i:first-child{
+        color: rgba( 16,16,15,.3);				
+        font-size: 4.6rem;
+
+        z-index: 2999;				
+      }
+      i:last-child{
+        color: #10a100;
+        font-size: 2.6rem;
+        transform: translate(1.4rem, 1.5rem);
+        z-index: 3000;
+      }
+    }
+  }
+  .express{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .fa-stack{		
+      i:first-child{
+        color: rgba( 16,16,15,.3);				
+        font-size: 4.6rem;
+
+        z-index: 2999;				
+      }
+      i:last-child{
+        color: #ac0002;
+        font-size: 3.4rem;
+        transform: translate(1.8rem, 1.5rem);
+        z-index: 3000;
+      }
+    }
+  }
+}
+ 	
+	.price-tr{
+		td{
+			padding-bottom: 1.4rem;
+		}
+		
+	 	.price-header{
+			strong{
+				text-transform: uppercase;
+			}
+			.net{
+				font-size: 1.4rem;
+			}
+			.gro{
+				font-size: 1.2rem;
+				color:gray;
+			}
+			
+		}
+	 }
+	
+	.q-line{
+		td:first-child{
+			width: 20%;
+		}
+
+		td.standard, td.express {
+			width: 40%;
+			
+			a {
+				flex-direction: column;
+									
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: none;
+				
+				&.selected, &:hover, &[current="true"]{
+					background-color: #ff8e00;
+					color: white;
+					font-weight: bold;
+					
+				}
+				&:hover{
+					background-color: rgba(#ff8e00, .7);
+				}
+				
+				&.selected:hover, &[current="true"]:hover{
+					background-color: #ff8e00;
+				}
+				
+				.net{
+					font-size: 1.5rem;
+				}
+				.gro{
+					font-size: 1.1rem;
+					color:#606060;
+				}
+				
+			}
+
+			&:hover{
+				background-color: rgba(#f2eee9, .3);
+			}
+
+		}
+	
+		&:nth-child(2n+2){
+			background: #f2eee9;
+
+		
+
+		}
+	}
+  
+  
+  .loading{ 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    bottom:0;
+    left:0;
+    z-index: 1000000;
+    
+    i{
+      color: #ff6600;
+      font-size: 3rem;
+    }
+    
+    &.run-loader{
+      
+    }
+    
+    
+    
+  }
+    
+  table.is-blocked{
+    opacity: .4;
+  }
+    
+  
+  
+}
+

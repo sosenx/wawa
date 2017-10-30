@@ -1,0 +1,147 @@
+<div class="variations-form">
+		
+	<div class="header" v-if="visible">
+		<span class="lp">1</span>
+		<span class="label">Wybierz parametry (Notes klejony)</span>
+	</div>
+		
+		
+	
+			
+			<!--Format-->
+			<ginput 
+				:attribute="product_attr_data.attribute_pa_format"
+				:attr_name="'attribute_pa_format'"
+				:input_settings="input_settings.attribute_pa_format"
+				:value="variation_data.attribute_pa_format" :name="'attribute_pa_format'">
+			</ginput>
+			
+			<!--Podłoże-->
+			<ginput 
+				:attribute="product_attr_data.attribute_pa_podloze"
+				:attr_name="'attribute_pa_podloze'"
+				:input_settings="input_settings.attribute_pa_podloze"
+				:value="variation_data.attribute_pa_podloze" :name="'attribute_pa_podloze'">
+			</ginput>
+			
+			<!--Orientacja-->
+			<ginput 
+				:attribute="product_attr_data.attribute_pa_orientacja"
+				:attr_name="'attribute_pa_orientacja'"
+				:input_settings="input_settings.attribute_pa_orientacja"
+				:value="variation_data.attribute_pa_orientacja" :name="'attribute_pa_orientacja'">
+			</ginput>
+			
+			
+			
+			
+			<!--Ilość kart-->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_ilosc-kart']"
+				:attr_name="'attribute_pa_ilosc-kart'"
+				:input_settings="input_settings['attribute_pa_ilosc-kart']"
+				:value="variation_data['attribute_pa_ilosc-kart']" :name="'attribute_pa_ilosc-kart'">
+			</ginput>
+			
+			<!-- Zadruk stron-->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_zadruk']"
+				:attr_name="'attribute_pa_zadruk'"
+				:input_settings="input_settings['attribute_pa_zadruk']"
+				:value="variation_data['attribute_pa_zadruk']" :name="'attribute_pa_zadruk'">
+			</ginput>
+			
+		
+		
+		
+		<section class="cover-info">
+			<h3>Okładka</h3>			
+			
+			<!-- Oprawa -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_oprawa']"
+				:attr_name="'attribute_pa_oprawa'"
+				:input_settings="input_settings['attribute_pa_oprawa']"
+				:value="variation_data['attribute_pa_oprawa']" :name="'attribute_pa_oprawa'">
+			</ginput>
+			
+			
+			<!-- Rodzaj okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_rodzaj-okladki']"
+				:attr_name="'attribute_pa_rodzaj-okladki'"
+				:input_settings="input_settings['attribute_pa_rodzaj-okladki']"
+				:value="variation_data['attribute_pa_rodzaj-okladki']" :name="'attribute_pa_rodzaj-okladki'">
+			</ginput>				
+			
+											
+			<!-- Papier okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_papier-okladki']"
+				:attr_name="'attribute_pa_papier-okladki'"
+				:input_settings="input_settings['attribute_pa_papier-okladki']"
+				:value="variation_data['attribute_pa_papier-okladki']" :name="'attribute_pa_papier-okladki'">
+			</ginput>
+			
+			
+			<!-- Zadruk okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_zadruk-okladki']"
+				:attr_name="'attribute_pa_zadruk-okladki'"
+				:input_settings="input_settings['attribute_pa_zadruk-okladki']"
+				:value="variation_data['attribute_pa_zadruk-okladki']" :name="'attribute_pa_zadruk-okladki'">
+			</ginput>
+			
+			
+			<!-- Uszlachetnienie okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_uszlachetnienie-okladki']"
+				:attr_name="'attribute_pa_uszlachetnienie-okladki'"
+				:input_settings="input_settings['attribute_pa_uszlachetnienie-okladki']"
+				:value="variation_data['attribute_pa_uszlachetnienie-okladki']" :name="'attribute_pa_uszlachetnienie-okladki'">
+			</ginput>
+						
+			
+			<!-- Lakier wybiorczy okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_lakier-wybiorczy-okladki']"
+				:attr_name="'attribute_pa_lakier-wybiorczy-okladki'"
+				:input_settings="input_settings['attribute_pa_lakier-wybiorczy-okladki']"
+				:value="variation_data['attribute_pa_lakier-wybiorczy-okladki']" :name="'attribute_pa_lakier-wybiorczy-okladki'">
+			</ginput>
+			
+			
+		</section>
+		
+		
+		
+		
+		
+		<section class="extended-info">
+			<h3>Informacje dodadkowe</h3>
+			
+			
+			<!-- Pakowanie egzemplarzy w folię -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_pakowanie-w-folie']"
+				:attr_name="'attribute_pa_pakowanie-w-folie'"
+				:input_settings="input_settings['attribute_pa_pakowanie-w-folie']"
+				:value="variation_data['attribute_pa_pakowanie-w-folie']" :name="'attribute_pa_pakowanie-w-folie'">
+			</ginput>
+			
+			<!-- Wiercenie otworów -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_wiercenie-otworow']"
+				:attr_name="'attribute_pa_wiercenie-otworow'"
+				:input_settings="input_settings['attribute_pa_wiercenie-otworow']"
+				:value="variation_data['attribute_pa_wiercenie-otworow']" :name="'attribute_pa_wiercenie-otworow'">
+			</ginput>
+			
+			
+		</section>
+		
+		
+	
+		
+	
+</div>

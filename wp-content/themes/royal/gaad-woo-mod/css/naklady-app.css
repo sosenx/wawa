@@ -1,0 +1,84 @@
+/* CSS Document */
+.nakladyapp {
+  position: relative; }
+  .nakladyapp td {
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
+  .nakladyapp .icon-labels td {
+    padding-bottom: 1.4rem; }
+  .nakladyapp .icon-labels .standard .fa-stack i:first-child {
+    color: rgba(16, 16, 15, 0.3);
+    font-size: 4.6rem;
+    z-index: 2999; }
+  .nakladyapp .icon-labels .standard .fa-stack i:last-child {
+    color: #10a100;
+    font-size: 2.6rem;
+    transform: translate(1.4rem, 1.5rem);
+    z-index: 3000; }
+  .nakladyapp .icon-labels .express {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nakladyapp .icon-labels .express .fa-stack i:first-child {
+      color: rgba(16, 16, 15, 0.3);
+      font-size: 4.6rem;
+      z-index: 2999; }
+    .nakladyapp .icon-labels .express .fa-stack i:last-child {
+      color: #ac0002;
+      font-size: 3.4rem;
+      transform: translate(1.8rem, 1.5rem);
+      z-index: 3000; }
+  .nakladyapp .price-tr td {
+    padding-bottom: 1.4rem; }
+  .nakladyapp .price-tr .price-header strong {
+    text-transform: uppercase; }
+  .nakladyapp .price-tr .price-header .net {
+    font-size: 1.4rem; }
+  .nakladyapp .price-tr .price-header .gro {
+    font-size: 1.2rem;
+    color: gray; }
+  .nakladyapp .q-line td:first-child {
+    width: 20%; }
+  .nakladyapp .q-line td.standard, .nakladyapp .q-line td.express {
+    width: 40%; }
+    .nakladyapp .q-line td.standard a, .nakladyapp .q-line td.express a {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: none; }
+      .nakladyapp .q-line td.standard a.selected, .nakladyapp .q-line td.standard a:hover, .nakladyapp .q-line td.standard a[current="true"], .nakladyapp .q-line td.express a.selected, .nakladyapp .q-line td.express a:hover, .nakladyapp .q-line td.express a[current="true"] {
+        background-color: #ff8e00;
+        color: white;
+        font-weight: bold; }
+      .nakladyapp .q-line td.standard a:hover, .nakladyapp .q-line td.express a:hover {
+        background-color: rgba(255, 142, 0, 0.7); }
+      .nakladyapp .q-line td.standard a.selected:hover, .nakladyapp .q-line td.standard a[current="true"]:hover, .nakladyapp .q-line td.express a.selected:hover, .nakladyapp .q-line td.express a[current="true"]:hover {
+        background-color: #ff8e00; }
+      .nakladyapp .q-line td.standard a .net, .nakladyapp .q-line td.express a .net {
+        font-size: 1.5rem; }
+      .nakladyapp .q-line td.standard a .gro, .nakladyapp .q-line td.express a .gro {
+        font-size: 1.1rem;
+        color: #606060; }
+    .nakladyapp .q-line td.standard:hover, .nakladyapp .q-line td.express:hover {
+      background-color: rgba(242, 238, 233, 0.3); }
+  .nakladyapp .q-line:nth-child(2n+2) {
+    background: #f2eee9; }
+  .nakladyapp .loading {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000000; }
+    .nakladyapp .loading i {
+      color: #ff6600;
+      font-size: 3rem; }
+  .nakladyapp table.is-blocked {
+    opacity: .4; }
+
+/*# sourceMappingURL=naklady-app.css.map */

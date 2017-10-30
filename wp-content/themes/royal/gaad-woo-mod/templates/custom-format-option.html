@@ -1,0 +1,9 @@
+<div class="custom-format-option"> 
+
+<input type="text" name="width" @keyup="check($event)" @blur="check($event)" @focus="check($event)" v-model="width">
+x
+<input type="text" name="height" @keyup="check($event)" @blur="check($event)" @focus="check($event)" v-model="height">
+
+<input type="button" value="ok" v-if="value" @click="setValue">
+
+</div> 

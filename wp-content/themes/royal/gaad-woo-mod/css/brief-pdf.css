@@ -1,0 +1,76 @@
+/* CSS Document */
+/* line 6, brief-pdf.scss */
+.production-process {
+  width: 192mm;
+  border: 1px solid gray; }
+  /* line 11, brief-pdf.scss */
+  .production-process h3 {
+    text-align: center;
+    line-height: 15mm;
+    font-size: 13pt; }
+  /* line 17, brief-pdf.scss */
+  .production-process td {
+    line-height: 5mm;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray; }
+
+/* line 26, brief-pdf.scss */
+.product-attributes-list-table {
+  width: 192mm;
+  border: 1px solid gray; }
+  /* line 32, brief-pdf.scss */
+  .product-attributes-list-table .header-title h3 {
+    line-height: 20mm;
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold; }
+  /* line 41, brief-pdf.scss */
+  .product-attributes-list-table tr.regular-line td {
+    line-height: 4mm; }
+
+/* line 49, brief-pdf.scss */
+.brief-header-table {
+  width: 192mm; }
+  /* line 55, brief-pdf.scss */
+  .brief-header-table .header-title h3 {
+    line-height: 20mm;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold; }
+  /* line 64, brief-pdf.scss */
+  .brief-header-table .header-tr .order-id, .brief-header-table .header-tr .item-name {
+    line-height: 12mm;
+    font-size: 14pt;
+    text-align: center;
+    border: 2mm solid white; }
+
+/* line 79, brief-pdf.scss */
+table.header-info {
+  width: 100%; }
+  /* line 83, brief-pdf.scss */
+  table.header-info .header-tr .wawa-logo {
+    width: 30mm;
+    height: auto; }
+  /* line 88, brief-pdf.scss */
+  table.header-info .header-tr td {
+    background-color: #ff6600;
+    color: white; }
+  /* line 94, brief-pdf.scss */
+  table.header-info .item-name {
+    display: block; }
+
+/* line 102, brief-pdf.scss */
+table.kontrahent-data {
+  border: 1px solid gray;
+  margin-top: 3mm; }
+  /* line 107, brief-pdf.scss */
+  table.kontrahent-data tr td {
+    line-height: 5mm; }
+    /* line 110, brief-pdf.scss */
+    table.kontrahent-data tr td:first-child {
+      width: 25%; }
+    /* line 114, brief-pdf.scss */
+    table.kontrahent-data tr td:last-child {
+      width: 75%; }
+
+/*# sourceMappingURL=brief-pdf.css.map */

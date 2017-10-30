@@ -1,0 +1,33 @@
+<div id="product-cross-sell-app"><br>
+
+	<!--v-if="visible"-->
+	<div class="header" >		
+		<h3>Produkty, które również mogą Cię zainteresować.</h3>
+	</div>
+
+	<ul>
+		<li v-for="item in items" class="crosssell-product" >
+			
+			<a :href="item.permalink">
+				<h4>{{item.post.post_title}}</h4>
+				<img :src="item.thumb">	
+				
+				
+				<div class="price-wrap">
+					<i class="fa fa-certificate" aria-hidden="true"></i>
+					<span class="price_prefix">Tylko</span>
+					<span class="price_price">{{ item.q[0]._price }} zł</span>
+					<span class="price_sufix">
+						<span class="separator">za&nbsp;</span>{{ item.q[0]._quantity }}<span class="separator">&nbsp;szt.</span>
+					</span>
+				</div>
+				
+				
+			
+			
+			</a>
+		</li>		
+	</ul>
+
+
+</div>

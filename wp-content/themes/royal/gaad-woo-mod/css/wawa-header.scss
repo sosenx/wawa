@@ -1,0 +1,80 @@
+/* CSS Document */
+.wawa-header{
+
+	border-bottom: 1px solid lightgray;
+	padding-top:1rem;
+	padding-bottom:1rem;
+	margin-bottom:1rem;
+	margin-top:1rem;
+	
+	
+	.header-logo{
+		img{
+			max-height: 4.2rem;
+		}
+	}			
+
+
+
+	
+	.tmenu{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		min-height: 4.2rem;
+		
+		ul{
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			
+			li{
+				padding-left: 1.4rem;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				
+				a{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					
+					i{
+						padding-right: .4rem;
+						font-size: 2rem;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						color: rgba( 0,0,0, .6 );
+					}
+					
+					span{
+						font-size: 1.5rem;
+						
+					}
+					
+					.user-login{
+						padding-left: 1rem;
+					}
+					.user-log-out{
+						padding-left: 1rem;
+						
+						i{
+							color: rgba( 0,0,0, .4 );
+						}
+					}
+					
+					&:hover{
+						i, span {
+							color: rgba( 0,0,0, .9 );
+						}
+						
+					}
+					
+				}
+			}
+		}
+		
+	}
+	
+}

@@ -1,0 +1,73 @@
+<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+		
+			<div class="free-shipment" v-if="typeof order_total.total_shipping.total.free_shipment != 'undefiend' && order_total.total_shipping.total.free_shipment == true"> 
+				
+				<div class="tr shipment-total free-shipment">
+					
+					<div class="v">
+						<i class="fa fa-truck" aria-hidden="true"></i>
+						<strong>Darmowa Dostawa!</strong>
+					</div>
+				</div>
+			
+			</div>
+			<div v-if="order_total.total_shipping.total.total > 0" class="totals">
+			
+				<div class="tr shipment-total">
+					<div class="l">Koszt dostawy <span>(netto/brutto)</span></div>
+					<div class="v">
+						<i class="fa fa-truck" aria-hidden="true"></i>
+						{{ order_total.total_shipping.total.cost }} {{cart_sett.currency_symbol}} <span>({{ order_total.total_shipping.total.total }})</span>
+					</div>
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		
+		<div class="col-md-4 totals-wrap">
+			
+			<div class="totals">
+				<div class="tr net-total">
+					<div class="l">Suma netto</div>
+					<div class="v">{{ order_total.total_net }} <span>{{cart_sett.currency_symbol}}</span></div>
+				</div>
+				<div class="tr gross-total">
+					<div class="l">Suma brutto</div>
+					<div class="v">{{ order_total.total + order_total.total_shipping.total.total }} <span>{{cart_sett.currency_symbol}}</span></div>
+				</div>
+			</div>				
+		
+		</div>
+	
+	
+	
+		<payment v-if="!cart_sett.disable_payment_panel && cart_sett.verify_payment" class="col-md-4 col-md-offset-8 payment-wrap" :order_payment="order_payment"></payment>
+	
+	
+	
+		<div v-if="typeof order_payment.status == 'undefined'" class="col-md-6 col-md-offset-6 submit-bar">
+			<submit-status-icon
+				v-if="!(typeof parseInt(order_payment.id) == 'number' && order_payment.id != false) || cart_sett.disable_payment_panel"			
+				v-bind:status="files_total.total_status" ></submit-status-icon>
+			<input 
+				v-if="!(typeof parseInt(order_payment.id) == 'number' && order_payment.id != false) || cart_sett.disable_payment_panel"
+				type="button" @click="pushOrder" 
+				v-bind:value="typeof cart_sett.submit != 'undefined' ? cart_sett.submit.text : 'submit' " >
+		</div>
+		
+	
+		
+		
+		
+		<div v-if="typeof order_payment.status != 'undefined' && order_payment.status == 0" class="col-md-6 col-md-offset-6 submit-bar">
+			
+			<h1 style="color:red">Dziekujemy za zakupy!</h1>
+			
+		</div>
+		
+		
+		
+	</div>

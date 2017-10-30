@@ -1,0 +1,115 @@
+/* CSS Document */
+.product-summary .header {
+  font-weight: bold;
+  color: #ff6600; }
+
+.summary-shipment ul li.ship {
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.3rem; }
+  .summary-shipment ul li.ship h5 {
+    font-family: "Open Sans";
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #ff8e00;
+    margin: 0; }
+  .summary-shipment ul li.ship > div {
+    font-size: 1.4rem;
+    color: #a3a3a3; }
+    .summary-shipment ul li.ship > div span span {
+      font-size: 1.2rem; }
+
+.summary-price {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  background: #f2eee9;
+  padding: 0.2rem 1rem 0.1rem 1rem; }
+  .summary-price ul li.net {
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3rem; }
+    .summary-price ul li.net h5 {
+      font-family: "Open Sans";
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff8e00;
+      margin: 0; }
+    .summary-price ul li.net > div {
+      font-size: 1.9rem; }
+      .summary-price ul li.net > div .v {
+        color: #333;
+        font-size: 2.3rem; }
+      .summary-price ul li.net > div .c {
+        color: #a3a3a3;
+        font-size: 1.4rem; }
+      .summary-price ul li.net > div .t {
+        color: #a3a3a3;
+        font-size: 1.4rem; }
+  .summary-price ul li.gro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3rem; }
+    .summary-price ul li.gro > div {
+      color: #a3a3a3;
+      font-size: 1.4rem; }
+      .summary-price ul li.gro > div .v {
+        padding-right: .15rem; }
+      .summary-price ul li.gro > div .c {
+        padding-right: .2rem; }
+
+.summary-footer {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end; }
+  .summary-footer .add-to-order {
+    margin-bottom: 1rem;
+    background-color: rgba(34, 157, 219, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1.4rem;
+    font-size: 1.7rem;
+    cursor: pointer; }
+    .summary-footer .add-to-order span {
+      padding-left: .5rem; }
+    .summary-footer .add-to-order:hover {
+      background-color: #229ddb;
+      color: white; }
+  .summary-footer .go-to-cart {
+    cursor: pointer;
+    color: #a3a3a3;
+    font-size: 1.4rem;
+    margin-bottom: 3rem; }
+    .summary-footer .go-to-cart:hover {
+      color: #6E6D6D; }
+  .summary-footer .message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .summary-footer .message .icon {
+      width: 20%; }
+    .summary-footer .message .info {
+      font-weight: bold; }
+
+.summary-attr-basic ul li, .summary-attr-ksiazka ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.3rem; }
+  .summary-attr-basic ul li .l, .summary-attr-ksiazka ul li .l {
+    font-weight: bold;
+    width: 40%;
+    color: rgba(15, 15, 15, 0.65); }
+  .summary-attr-basic ul li .v, .summary-attr-ksiazka ul li .v {
+    color: rgba(15, 15, 15, 0.7); }

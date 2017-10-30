@@ -1,0 +1,76 @@
+table.main .wawa_logo {
+  margin-top: 7mm;
+  padding-top: 7mm;
+  width: 50mm;
+  height: auto; }
+table.main .h1 {
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  line-height: 20pt;
+  font-size: 15pt; }
+table.main .excerpt {
+  margin: 0;
+  padding: 0;
+  line-height: 12pt;
+  font-size: 9pt; }
+table.main tr.header {
+  border-bottom: 1px solid black; }
+  table.main tr.header td.addr {
+    width: 50%; }
+    table.main tr.header td.addr p {
+      font-size: 8pt;
+      line-height: 11pt;
+      color: #262626; }
+table.main tr.body td.left .section-1 .product_thumbnail {
+  width: 70mm; }
+table.main tr.body td.right table.attr-table {
+  font-size: 8pt;
+  width: 80mm; }
+  table.main tr.body td.right table.attr-table td {
+    line-height: 15pt;
+    border-bottom: 1px solid #CCC; }
+  table.main tr.body td.right table.attr-table td.attr-name {
+    width: 35mm; }
+  table.main tr.body td.right table.attr-table td.attr-value {
+    width: 45mm; }
+table.main tr.extended-prices-title h3 {
+  text-align: center; }
+table.main tr.extended-prices td.margin {
+  width: 25mm; }
+table.main tr.extended-prices td.center {
+  text-align: center; }
+  table.main tr.extended-prices td.center table {
+    display: inline-block; }
+table.main table.extended {
+  width: 120mm; }
+  table.main table.extended tr.header td {
+    background-color: #ff6600;
+    font-size: 12pt;
+    line-height: 22pt;
+    color: white;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray; }
+    table.main table.extended tr.header td:first-child {
+      border-left: 1px solid gray; }
+    table.main table.extended tr.header td:last-child {
+      border-right: 1px solid gray; }
+  table.main table.extended tr.ext-line td {
+    font-size: 10pt;
+    line-height: 15pt;
+    border-bottom: 1px solid gray; }
+    table.main table.extended tr.ext-line td:first-child {
+      border-left: 1px solid gray; }
+    table.main table.extended tr.ext-line td:last-child {
+      border-right: 1px solid gray; }
+  table.main table.extended tr td p {
+    display: block;
+    text-align: center; }
+table.main .go-to-btn {
+  display: block;
+  width: 150mm;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  font-size: 12pt;
+  line-height: 20pt; }

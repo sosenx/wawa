@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAkB;;AAGjB,wBAAO;EACN,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,OAAO",
+"sources": ["product-summary-app.scss"],
+"names": [],
+"file": "product-summary-app.css"
+}

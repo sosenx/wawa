@@ -1,0 +1,120 @@
+<div v-bind:class="[ginput_class, typeof this.input_settings != 'undefined' && typeof this.input_settings.class != 'undefined' ? this.input_settings.class : ''].join(' ')">
+ 
+  <div class="error-msg" v-if="!input_settings.validation.status && input_settings.validation.errorMsg != null">
+    
+    <i class="fa fa-exclamation" aria-hidden="true"></i>
+    <span class="msg">{{input_settings.validation.errorMsg}}</span>
+    
+  </div>
+
+
+	<!-- Pole checkbox -->
+	<div class="checkbox-holder" v-if="typeof input_settings != 'undefined' && input_settings.type == 'checkbox'">
+		
+		<div class="ginput-header">
+						
+			<div class="input-holder" :class="{ 'unavaible-option' : this.isCheckboxProtected( attribute ) || (!this.isCheckboxProtected( attribute ) && typeof input_settings.disabled !== 'undefined' && input_settings.disabled === 'true') }">
+			
+				<label :for="attr_name" @click="checkboxClick( $event )">{{input_settings.labels.l}}</label>
+				<input type="checkbox" :name="attr_name" @click="checkboxClick( $event )">
+			</div>
+			
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-- Pole text -->
+	<div class="text-holder" v-if="typeof input_settings != 'undefined' && input_settings.type == 'text'">
+		
+		<div class="ginput-header">
+			
+			<div class="input-holder">
+			
+			  
+			
+				<label :for="attr_name">{{ input_settings.labels.l }}</label>
+				<input type="text" 
+					v-if="typeof input_settings.unit == 'undefined'"
+					:name="attr_name"					
+					:value="getLabel( value )"
+					@focus="storeCurrentValue( $event )"
+					@click="selectAll( $event )"
+					@keyup.13="setTextValue( $event )"
+					@keydown="storeCurrentValue( $event )"
+					@blur="setTextValue( $event )"					
+				>
+				<input type="text" class="unit"
+					v-if="typeof input_settings.unit != 'undefined'"
+					:name="attr_name"
+					:unit="input_settings.unit" 
+					:value="getLabel( value )"
+					@focus="storeCurrentValue( $event )"
+					@click="selectAll( $event )"
+					@keydown="storeCurrentValue( $event )"
+					@blur="setTextValue( $event )"					
+				>
+				
+			</div>
+			
+			<div v-if="typeof input_settings.unit != 'undefined'" class="unit-holder">{{ input_settings.unit }}</div>
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-- Pole select -->
+	<div :class="{'select-holder' : true}" v-if="typeof input_settings != 'undefined' && input_settings.type == 'select'">
+
+		<div class="ginput-header">
+			<label :for="attr_name">{{input_settings.labels.l}}</label>
+			<div class="input-holder" v-on:click="showOptionsPanel($event)">
+				<input disabled type="text"
+					:name="attr_name" 
+					:value="getOptionLabel( value )">
+				<i class="fa fa-caret-down drop-down" aria-hidden="true" v-on:click="showOptionsPanel($event)"></i>
+			</div>
+
+			
+		</div>
+
+
+		<div :class="{ 'options': true, 't-col' : attribute.length >= 8 }" v-if="showOptions">
+			
+			<!-- Options panel: opis atrybutu + help (potem :) -->
+			<div class="opanel" v-if="typeof input_settings.labels.opanel == 'object'">
+				<h3>{{ typeof input_settings.labels.opanel.title != 'undefined' ? input_settings.labels.opanel.title : attr_name }}</h3>					
+			</div>
+		
+			
+		
+			<div :class="{ 'display-none' : isCurrent(attr_value) || !(typeof attr_value.unavaible === 'undefined' || attr_value.unavaible === false), 'option' : true }" v-for="(attr_value, key, index) in attribute">
+   
+      
+				<div 
+           :class="{  'predefined-option' : true, 'unavaible-option' : !(typeof attr_value.unavaible === 'undefined' || attr_value.unavaible === false) }"
+					 :value="attr_value.slug"
+					 :name="attr_value.name"
+					 v-if="attr_value.slug != 'wlasny-format'" 
+					 @click="setOption( attr_value.slug, $event )">
+					 
+					<div class="text">{{ getOptionLabel( attr_value ) }}</div>
+				</div>
+				
+				<!-- Własny format in development-->
+				<div class="custom-option" :value="attr_value.slug" v-if="attr_value.slug == 'wlasny-format' && input_settings.custom_val">
+					<label>Własny format</label>
+					<custom-format-option :input_settings="input_settings" ></custom-format-option>							
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+	
+
+</div>

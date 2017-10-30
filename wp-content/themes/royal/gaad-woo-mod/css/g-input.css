@@ -1,0 +1,165 @@
+/* CSS Document */
+.g-input {
+  position: relative;
+  margin-bottom: 1rem; }
+  .g-input .error-msg {
+    background-color: red;
+    color: white; }
+  .g-input .display-none {
+    display: none; }
+  .g-input .ginput-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .g-input .ginput-header input {
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid #d3d0cc;
+      padding: 0.4rem 0 0.4rem 0.5rem;
+      line-height: 1rem;
+      height: auto;
+      background: #f2eee9;
+      font-size: 1.3rem; }
+    .g-input .ginput-header label {
+      font-weight: bold; }
+    .g-input .ginput-header .drop-down {
+      font-size: 2rem;
+      background: #dfdbd7;
+      width: 3rem;
+      height: 2.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #d3d0cc; }
+  .g-input .text-holder .input-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; }
+    .g-input .text-holder .input-holder.unit {
+      width: calc(100% - 4rem); }
+  .g-input .text-holder .unit-holder {
+    padding-left: 1rem; }
+  .g-input .checkbox-holder .input-holder {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    width: auto; }
+    .g-input .checkbox-holder .input-holder.unavaible-option label {
+      color: #989898; }
+    .g-input .checkbox-holder .input-holder.unavaible-option input {
+      opacity: .5; }
+  .g-input .select-holder .input-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(100% - 2rem); }
+  .g-input .options {
+    position: absolute;
+    z-index: 40001; }
+    .g-input .options .option {
+      margin-top: .2rem;
+      margin-bottom: .4rem;
+      cursor: default; }
+  .g-input.short-50 {
+    width: 49%;
+    margin-left: 1%; }
+    .g-input.short-50 .ginput-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline; }
+      .g-input.short-50 .ginput-header input {
+        width: 55%; }
+    .g-input.short-50 .text-holder .input-holder {
+      flex-direction: row;
+      align-items: baseline; }
+      .g-input.short-50 .text-holder .input-holder label {
+        margin-right: 1rem; }
+  .g-input.inline .ginput-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; }
+    .g-input.inline .ginput-header label {
+      width: 60%; }
+    .g-input.inline .ginput-header input {
+      width: 40%; }
+  .g-input.inline .text-holder .input-holder {
+    flex-direction: row;
+    align-items: baseline; }
+    .g-input.inline .text-holder .input-holder label {
+      margin-right: 1rem; }
+  .g-input.inline .select-holder .input-holder {
+    flex-direction: row;
+    align-items: baseline;
+    width: calc(100% - 2rem); }
+    .g-input.inline .select-holder .input-holder input {
+      transform: translateY(-2px);
+      width: calc(100% - 3rem); }
+
+@media screen and (min-width: 991px) {
+  .g-input .options {
+    width: 100%;
+    top: -.5rem;
+    max-width: 30rem;
+    left: calc(100% + 1rem);
+    padding: 1rem;
+    border-radius: 9px;
+    color: white;
+    background-color: #ff6600; }
+    .g-input .options .option .text {
+      padding-left: 1rem;
+      padding-left: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline; }
+      .g-input .options .option .text:before {
+        content: "\f111";
+        display: inline-block;
+        font: normal normal normal 0.6rem/1 FontAwesome;
+        transform: translate(-0.6rem, -0.3rem);
+        color: rgba(255, 255, 255, 0.72); }
+    .g-input .options .option:hover {
+      background: rgba(255, 255, 255, 0.8);
+      color: #666;
+      cursor: pointer; }
+    .g-input .options .predefined-option {
+      padding: .4rem; }
+    .g-input .options .unavaible-option {
+      color: rgba(255, 255, 255, 0.5); }
+      .g-input .options .unavaible-option .text:before {
+        content: "\f00d";
+        font-size: 1.5rem;
+        transform: translateX(-0.9rem); }
+      .g-input .options .unavaible-option:hover {
+        background-color: transparent !important; }
+        .g-input .options .unavaible-option:hover .text {
+          color: red; }
+          .g-input .options .unavaible-option:hover .text:before {
+            color: red; }
+    .g-input .options .opanel h3 {
+      font-size: 1.7rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+      padding-bottom: 0.7rem; }
+    .g-input .options:before {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 12px 12px 12px 0;
+      border-color: transparent #ff6600;
+      display: block;
+      width: 0;
+      z-index: 1;
+      left: -12px;
+      top: 0.7rem; }
+  .g-input.two-columns .options.t-col {
+    max-width: 50rem;
+    width: 180%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .g-input.two-columns .options.t-col .opanel {
+      width: 100%; }
+    .g-input.two-columns .options.t-col .option {
+      width: 50%; } }
+
+/*# sourceMappingURL=g-input.css.map */

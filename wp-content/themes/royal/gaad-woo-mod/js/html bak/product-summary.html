@@ -1,0 +1,83 @@
+<div id="productSummaryApp" class="product-summary">
+
+	<div class="header" v-if="visible">
+		<span class="lp">3</span>
+		<span class="label">Zamów</span>
+	</div>
+	
+
+
+	<table class="summary" v-if="visible">
+		<tr>
+			<td class="header" colspan="2">Cena:</td>   							
+		</tr>
+
+		<tr>
+			<td class="l">
+
+				Nakład <span class="tip">(szt)</span>
+
+			</td>   							
+			<td class="v">{{ variation._quantity }}</td>
+		</tr>
+
+
+		<tr v-if="variation.square_price">
+			<td class="l">
+
+				Cena m<sup>2</sup> <span class="tip">(cena brutto)</span>
+
+			</td>   							
+			<td class="v">{{ Math.round( variation.square_price * 100) / 100 }} <span class="tip">({{ Math.round(  variation.square_price * 1.23 * 100) / 100  }})</span> </td>
+		</tr>
+
+
+		<tr>
+			<td class="l">
+
+				Cena netto <span class="tip">(cena brutto)</span>
+
+			</td>   							
+			<td class="v">{{ variation._regular_price }} <span class="tip">({{ Math.round(  variation._regular_price * 1.23 * 100) / 100  }})</span> </td>
+		</tr>
+
+
+
+
+		<tr>
+			<td class="header" colspan="2">Wysyłka:</td>   							
+		</tr>   						
+
+		<tr>
+			<td class="l">
+
+				Wysyłka w ciągu <span class="tip">(dni robocze)</span>
+
+			</td>   							
+			<td class="v">{{ ship.days }}</td>
+		</tr>
+
+		<tr>
+			<td class="l">
+
+				Szacowana data wysyłki
+
+			</td>   							
+			<td class="v">{{ ship.date }}</td>
+		</tr>
+
+
+
+
+		<tr>
+			<td clas="header" colspan="2">
+				<br><br>
+
+				<input type="button" v-on:click="goTo('http://wawaprint.pl/u/koszyk/')" value="Koszyk">
+				<input type="button" v-on:click="addToOrder" value="Dodaj do zamówienia">
+			</td>   							
+		</tr>   						
+
+	</table>	
+
+</div>

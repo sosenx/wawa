@@ -1,0 +1,111 @@
+/* CSS Document */
+	
+header,
+nav,
+footer,
+.wawa_breadcrumbs,
+.product-nav,
+.product-price-chart,
+#advertise_product,
+#wawa_footer,
+#product-cross-sell-app,
+.fixed-header-area,
+.top-col-right,
+.do-not-print,
+.demo_store{		
+	display:none;		
+}
+
+@page {
+	margin: 0;
+	
+}
+
+p{
+	font-size: 10pt;
+}
+
+
+
+.to-print, .print-only {
+	display:block !important;
+}
+
+.tabs-content{
+	border: none !important;
+	position: relative;
+	height: 55cm;
+}
+
+.left-col, .right-col {
+	width: 10cm;	
+	position: absolute;	
+	top: 3cm;
+}
+
+.header-title{
+	width: 17cm;
+	top:0;
+	left:0;
+	height:1.8cm;
+}
+
+.left-col {	
+	left:0;
+	padding-right: .3cm;
+}
+
+.right-col {	
+	left: 9.5cm;
+	padding-right: .7cm;
+	padding-left: .3cm;
+}
+
+
+.template-files{
+	display:block !important;
+	
+	a{
+		img{
+			max-width:1cm;
+		}
+	}
+}
+
+.header-title{
+		
+		img.print-only{
+			width: 4cm;
+   		 	display: inline !important;
+		}
+		
+		h3 {
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: 1cm;
+		}
+	}
+
+section{
+	
+	
+	
+	&.progs-icons{
+		span{
+			img{
+				padding-right: .5cm;
+				max-width: 2cm !important;
+			}
+		}
+	}
+	
+}
+
+.product-name{
+	font-size: 11pt;	
+}
+
+.parsed-format{
+	
+	text-transform: lowercase;
+}

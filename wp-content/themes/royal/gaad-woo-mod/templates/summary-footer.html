@@ -1,0 +1,28 @@
+<div class="summary-footer">
+  
+  
+  
+  <div class="add-to-order" type="button" v-on:click="addToOrder" >
+    <i class="fa fa-plus-square" aria-hidden="true"  v-if="!block"></i>
+    <i class="fa fa-spinner fa-spin fa-fw" v-if="block"></i>
+    <span v-if="!block">Dodaj do zamówienia</span>
+    <span v-if="block">Dodawanie do koszyka</span>
+    
+  </div>
+  
+  <div class="go-to-cart" v-on:click="goTo('http://wawaprint.pl/u/koszyk/')" >
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <span>Pokaż zawartość koszyka</span>
+  </div>
+  
+ 
+  
+  <div class="message add-to-order-done" v-if="addedToCartMsg" >
+    
+
+    
+    <span class="info">Przedmiot dodano do koszyka.</span>
+    
+  </div>
+  
+</div>

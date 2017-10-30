@@ -1,0 +1,147 @@
+<div class="variations-form" v-if="visible">
+		
+	<div class="header">
+		<span class="lp">1</span>
+		<span class="label">Wybierz parametry (Katalog/broszura)</span>
+	</div>
+		
+		
+		
+		<section class="basic-info" id="basic-info" data-default-visibility="true">		
+			<header @click="sectonVisibility( $event )">
+			  <h3>Podstawowe parametry</h3>
+			  <i class="fa fa-chevron-circle-down" aria-hidden="true"  v-if="!checkSectionVisibility('basic-info')"></i>			  
+			  <i class="fa fa-chevron-circle-up" aria-hidden="true" v-if="checkSectionVisibility('basic-info')"></i>			  
+			</header>
+			
+       <div class="body"  v-if="checkSectionVisibility('basic-info')">
+        <!--Format-->
+        <ginput 
+          :attribute="product_attr_data.attribute_pa_format"
+          :attr_name="'attribute_pa_format'"
+          :input_settings="input_settings.attribute_pa_format"
+          :value="variation_data.attribute_pa_format" :name="'attribute_pa_format'">
+        </ginput>
+
+        <!--Orientacja-->
+        <ginput 
+          :attribute="product_attr_data.attribute_pa_orientacja"
+          :attr_name="'attribute_pa_orientacja'"
+          :input_settings="input_settings.attribute_pa_orientacja"
+          :value="variation_data.attribute_pa_orientacja" :name="'attribute_pa_orientacja'">
+        </ginput>
+			
+      </div>
+			
+		</section>
+		
+		
+		
+		
+		<section class="cover-info" id="cover-info" data-default-visibility="false">
+			<header @click="sectonVisibility( $event )">
+        <h3>Okładka</h3>
+			  <i class="fa fa-chevron-circle-down" aria-hidden="true" v-if="!checkSectionVisibility('cover-info')"></i>			  
+			  <i class="fa fa-chevron-circle-up" aria-hidden="true" v-if="checkSectionVisibility('cover-info')"></i>			  
+			</header>			
+			
+      <div class="body"  v-if="checkSectionVisibility('cover-info')">
+        <!-- Oprawa -->
+        <ginput 
+          :attribute="product_attr_data['attribute_pa_oprawa']"
+          :attr_name="'attribute_pa_oprawa'"
+          :input_settings="input_settings['attribute_pa_oprawa']"
+          :value="variation_data['attribute_pa_oprawa']" :name="'attribute_pa_oprawa'">
+        </ginput>
+
+
+        <!-- Papier okładki -->
+        <ginput 
+          :attribute="product_attr_data['attribute_pa_papier-okladki']"
+          :attr_name="'attribute_pa_papier-okladki'"
+          :input_settings="input_settings['attribute_pa_papier-okladki']"
+          :value="variation_data['attribute_pa_papier-okladki']" :name="'attribute_pa_papier-okladki'">
+        </ginput>
+
+
+        <!-- Uszlachetnienie okładki -->
+        <ginput 
+          :attribute="product_attr_data['attribute_pa_uszlachetnienie-okladki']"
+          :attr_name="'attribute_pa_uszlachetnienie-okladki'"
+          :input_settings="input_settings['attribute_pa_uszlachetnienie-okladki']"
+          :value="variation_data['attribute_pa_uszlachetnienie-okladki']" :name="'attribute_pa_uszlachetnienie-okladki'">
+        </ginput>
+
+
+        <!-- Lakier wybiorczy okładki -->
+        <ginput 
+          :attribute="product_attr_data['attribute_pa_lakier-wybiorczy-okladki']"
+          :attr_name="'attribute_pa_lakier-wybiorczy-okladki'"
+          :input_settings="input_settings['attribute_pa_lakier-wybiorczy-okladki']"
+          :value="variation_data['attribute_pa_lakier-wybiorczy-okladki']" :name="'attribute_pa_lakier-wybiorczy-okladki'">
+        </ginput>
+      </div>
+		
+			
+			
+			
+		</section>
+		
+		
+		
+		
+		<section class="color-info" id="color-info" data-default-visibility="false">
+			<header @click="sectonVisibility( $event )" >
+          <h3>Druk 4+0, 4+4</h3>
+          <i class="fa fa-chevron-circle-down" aria-hidden="true" v-if="!checkSectionVisibility('color-info')"></i>			  
+			  <i class="fa fa-chevron-circle-up" aria-hidden="true" v-if="checkSectionVisibility('color-info')"></i>			  
+			</header>
+			
+			<div class="body"  v-if="checkSectionVisibility('color-info')">
+        <!--Ilość stron kolorowych -->
+        <ginput 
+          :attribute="product_attr_data['attribute_pa_ilosc-stron-kolorowych']"
+          :attr_name="'attribute_pa_ilosc-stron-kolorowych'"
+          :input_settings="input_settings['attribute_pa_ilosc-stron-kolorowych']"
+          :value="variation_data['attribute_pa_ilosc-stron-kolorowych']" :name="'attribute_pa_ilosc-stron-kolorowych'">
+        </ginput>
+
+        <!-- Papier kolor -->
+        <ginput 
+          :attribute="product_attr_data['attribute_pa_papier-kolor']"
+          :attr_name="'attribute_pa_papier-kolor'"
+          :input_settings="input_settings['attribute_pa_papier-kolor']"
+          :value="variation_data['attribute_pa_papier-kolor']" :name="'attribute_pa_papier-kolor'">
+        </ginput>
+
+
+        <!-- Uszlachetnienie -->
+        <ginput 
+          :attribute="product_attr_data['attribute_pa_uszlachetnienie']"
+          :attr_name="'attribute_pa_uszlachetnienie'"
+          :input_settings="input_settings['attribute_pa_uszlachetnienie']"
+          :value="variation_data['attribute_pa_uszlachetnienie']" :name="'attribute_pa_uszlachetnienie'">
+        </ginput>
+      </div>			
+		</section>
+		
+		
+		
+	
+		
+		
+		
+		
+		<div v-for="(attr, key, index) in product_attr_data" v-if="visible">
+			
+			<!--<ginput :attribute="attr" :attr_name="key" :input_settings="input_settings[key]" :value="variation_data[key]" :name="key"></ginput>	-->
+			
+			
+		
+		
+			
+			
+		</div>
+		
+	
+</div>

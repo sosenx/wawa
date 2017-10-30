@@ -1,0 +1,64 @@
+<div id="nakladyapp" class="nakladyapp">
+	
+	<div class="header" v-if="visible">
+		<span class="lp">2</span>
+		<span class="label">Wybierz nakład i tryb produkcji</span>
+	</div>
+	
+	
+	<table v-if="visible">
+		<tbody>
+		
+			<tr class="icon-labels">
+				<td>&nbsp;</td>
+				<td class="standard">				
+					<span class="fa-stack fa-lg">					  
+					  <i class="fa fa-clock-o fa-stack-2x"></i>
+					  <i class="fa fa-leaf fa-stack-1x"></i>
+					</span>															
+				</td>				
+				<td class="express">					
+					<span class="fa-stack fa-lg">					  
+					  <i class="fa fa-clock-o fa-stack-2x"></i>
+					  <i class="fa fa-bolt fa-stack-2x"></i>
+					</span>					
+				</td>
+			</tr>
+		
+			<tr class="price-tr">
+				<td>Nakład</td>
+				<td class="price-header">
+					<strong>Standard</strong><br>
+					<div class="net">cena netto</div>
+					<div class="gro">(cena brutto)</div>
+				</td>
+				<td class="price-header">
+					<strong>Ekspress</strong>
+					<div class="net">cena netto</div>
+					<div class="gro">(cena brutto)</div>
+				</td>
+			</tr>
+
+			<tr v-for="line in q" class="q-line">
+
+				<td>{{ line._quantity }}</td>
+
+				<td class="standard">
+					<a v-on:click="showSummary(line.variation_id, $event)">
+						<span class="net">{{ line._regular_price }}</span>
+						<span class="gro">({{ Math.round(line._regular_price * 1.23 *100 ) / 100 }} zł)</span>
+					</a>      						
+				</td>
+
+				<td class="express">      						
+					<a v-on:click="showSummary(line.express.variation_id, $event)">
+						<span class="net">{{ line.express._regular_price }} zł</span>
+						<span class="gro">({{ Math.round( line.express._regular_price * 1.23 *100 ) / 100 }}  zł)</span>
+					</a>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>

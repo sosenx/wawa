@@ -1,0 +1,65 @@
+<div class="variations-form" v-if="visible">
+		
+	<div class="header">
+		<span class="lp">1</span>
+		<span class="label">Wybierz parametry ( ulotka ) </span>
+	</div>
+		
+		
+		<!--Format-->
+		<ginput 
+			:attribute="product_attr_data.attribute_pa_format"
+			:attr_name="'attribute_pa_format'"
+			:input_settings="input_settings.attribute_pa_format"
+			:value="variation_data.attribute_pa_format" :name="'attribute_pa_format'">
+		</ginput>
+				
+		<!--Orientacja-->
+		<ginput 
+			:attribute="product_attr_data.attribute_pa_orientacja"
+			:attr_name="'attribute_pa_orientacja'"
+			:input_settings="input_settings.attribute_pa_orientacja"
+			:value="variation_data.attribute_pa_orientacja" :name="'attribute_pa_orientacja'">
+		</ginput>
+		
+		<!--Podłoże-->
+		<ginput 
+			:attribute="product_attr_data.attribute_pa_podloze"
+			:attr_name="'attribute_pa_podloze'"
+			:input_settings="input_settings.attribute_pa_podloze"
+			:value="variation_data.attribute_pa_podloze" :name="'attribute_pa_podloze'">
+		</ginput>
+	
+		
+		<!--Zadruk-->
+		<ginput 
+			:attribute="product_attr_data.attribute_pa_zadruk"
+			:attr_name="'attribute_pa_zadruk'"
+			:input_settings="input_settings.attribute_pa_zadruk"
+			:value="variation_data.attribute_pa_zadruk" :name="'attribute_pa_zadruk'">
+		</ginput>
+				
+		
+		<!--Uszlachetnienie-->
+		<ginput 
+			:attribute="product_attr_data.attribute_pa_uszlachetnienie"
+			:attr_name="'attribute_pa_uszlachetnienie'"
+			:input_settings="input_settings.attribute_pa_uszlachetnienie"
+			:value="variation_data.attribute_pa_uszlachetnienie" :name="'attribute_pa_uszlachetnienie'">
+		</ginput>
+			
+					
+      <!-- Lakier wybiorczy  -->
+      
+			<ginput 
+			  v-if="product_attr_data['attribute_pa_lakier-wybiorczy']"
+				:attribute="product_attr_data['attribute_pa_lakier-wybiorczy']"
+				:attr_name="'attribute_pa_lakier-wybiorczy'"
+				:input_settings="input_settings['attribute_pa_lakier-wybiorczy']"
+				:value="variation_data['attribute_pa_lakier-wybiorczy']" :name="'attribute_pa_lakier-wybiorczy'">
+			</ginput>		
+					
+				
+		
+	
+</div>

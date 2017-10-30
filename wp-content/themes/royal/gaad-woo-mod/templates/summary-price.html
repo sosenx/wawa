@@ -1,0 +1,34 @@
+<div class="summary-price">
+  
+  
+  <ul>
+        
+    
+    <li class="net">       
+      <h5>Cena:</h5>
+      <div>
+        <span class="v" v-html="calcNetPrice()"></span>
+        <span class="c">zł</span>
+        <span class="t">netto</span>
+      </div>  
+    </li>
+    
+    <li class="gro">   
+         
+      <div>
+        <span class="v" v-html="calcPiecePrice()"></span>
+        <span class="c">zł</span>
+        <span class="t">/ szt</span>
+      </div>
+      
+      <div>
+        <span class="v" v-html="calcGrossPrice()"></span>
+        <span class="c">zł</span>
+        <span class="t">brutto</span>
+      </div>
+    </li>
+    
+  </ul>
+  
+  
+</div>

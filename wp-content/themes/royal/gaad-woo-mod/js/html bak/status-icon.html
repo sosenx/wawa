@@ -1,0 +1,16 @@
+<div class="status-icon">
+	
+	<div v-if="status < 200" class="status-icon status-below-200">
+		<i class="fa fa-exclamation-triangle" aria-hidden="true" title="Plik z błędami"></i>		
+	</div>
+	
+	<div v-if="status == 200" class="status-icon status-200">
+		<i class="fa fa-check-circle" aria-hidden="true" title="Plik sprawdzony"></i>		
+	</div>
+	
+	<div v-if="status == 201" class="status-icon status-201">
+		<i class="fa fa-check-circle" aria-hidden="true" title="Plik sprawdzony"></i>		
+	</div>
+	
+
+</div>

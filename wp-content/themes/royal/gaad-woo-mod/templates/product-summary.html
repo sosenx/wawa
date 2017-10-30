@@ -1,0 +1,28 @@
+<div id="productSummaryApp" class="product-summary">
+
+	<div class="header" v-if="visible">
+		<span class="lp">3</span>
+		<span class="label">Parametry prodktu</span>
+	</div>
+	
+
+
+  
+	<div class="summary" v-if="visible">
+		
+    <summary-attr :v="variation_data" :quantity="variation._quantity" :ship="ship" ref="attr_mng"></summary-attr>
+    <summary-price :quantity="variation._quantity" :price="variation._price"></summary-price>
+    <summary-shipment :ship="ship"></summary-shipment>
+    <summary-footer ref="summaryFooter" :block="block"></summary-footer>
+
+
+
+
+
+		
+
+				
+		
+	</div>	
+
+</div>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kBAAkB;;AAGlB,qBAAqB;EACpB,UAAU,EAAG,GAAG",
+"sources": ["custom-format-option.scss"],
+"names": [],
+"file": "custom-format-option.css"
+}

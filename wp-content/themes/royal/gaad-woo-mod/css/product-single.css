@@ -1,0 +1,47 @@
+/* CSS Document */
+/* line 2, product-single.scss */
+.tabs-content {
+  background: white;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  border-top: none;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+/* line 21, product-single.scss */
+.tabs-content .calculations-row .header {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+/* line 25, product-single.scss */
+.tabs-content .calculations-row .header .lp {
+  background: #ff6600;
+  /*border-radius: 100rem;*/
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #666;
+}
+/* line 38, product-single.scss */
+.tabs-content .calculations-row .header .label {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #333;
+}
+/* line 51, product-single.scss */
+.tabs-content .nakladyapp-col.is_visible {
+  padding-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* line 60, product-single.scss */
+.tabs-content .variations_form-col.is_visible, .tabs-content .productSummaryApp-col.is_visible {
+  padding-top: 2rem;
+}
+
+/*# sourceMappingURL=product-single.css.map */

@@ -1,0 +1,70 @@
+/* line 3, product-description-app.scss */
+.product-description .product-thumb {
+  width: 30%;
+  float: left;
+  margin-right: 3rem;
+  margin-bottom: 1.5rem;
+}
+/* line 11, product-description-app.scss */
+.product-description .post-content {
+  font-size: 1.4rem;
+  margin-bottom: 5rem;
+}
+/* line 15, product-description-app.scss */
+.product-description .post-content * {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: #636160;
+}
+/* line 23, product-description-app.scss */
+.product-description .post-content ul li {
+  list-style: unset;
+  list-style-position: inside;
+}
+/* line 32, product-description-app.scss */
+.product-description .c2a-order-bar {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+/* line 40, product-description-app.scss */
+.product-description .c2a-order-bar .c2a-info {
+  padding-right: 3rem;
+}
+/* line 43, product-description-app.scss */
+.product-description .c2a-order-bar .c2a-info h4 {
+  font-size: 3rem;
+  margin: 0;
+}
+/* line 48, product-description-app.scss */
+.product-description .c2a-order-bar .c2a-info p {
+  font-size: 1.7rem;
+}
+/* line 54, product-description-app.scss */
+.product-description .c2a-order-bar .back-to-variations {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30rem;
+  background-color: #ff6600;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+/* line 64, product-description-app.scss */
+.product-description .c2a-order-bar .back-to-variations i {
+  font-size: 3rem;
+}
+/* line 68, product-description-app.scss */
+.product-description .c2a-order-bar .back-to-variations span {
+  font-size: 2rem;
+}
+/* line 72, product-description-app.scss */
+.product-description .c2a-order-bar .back-to-variations:hover {
+  background-color: #636160;
+}
+
+/*# sourceMappingURL=product-description-app.css.map */

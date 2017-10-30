@@ -1,0 +1,16 @@
+<div class="variations-form" v-if="visible">
+		
+	<div class="header">
+		<span class="lp">1</span>
+		<span class="label">Wybierz parametry</span>
+	</div>
+		
+		
+		<div v-for="(attr, key, index) in product_attr_data">
+			
+			<ginput :attribute="attr" :attr_name="key" :input_settings="input_settings[key]" :value="variation_data[key]" :name="key"></ginput>	
+			
+		</div>
+		
+	
+</div>

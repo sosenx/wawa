@@ -1,0 +1,238 @@
+<div class="variations-form">
+		
+	<div class="header" v-if="visible">
+		<span class="lp">1</span>
+		<span class="label">Wybierz parametry (KSIAZKA)</span>
+	</div>
+		
+		
+		
+		<section class="basic-info">		
+			<h3>Podstawowe parametry</h3>
+			
+			<!--Format-->
+			<ginput 
+				:attribute="product_attr_data.attribute_pa_format"
+				:attr_name="'attribute_pa_format'"
+				:input_settings="input_settings.attribute_pa_format"
+				:value="variation_data.attribute_pa_format" :name="'attribute_pa_format'">
+			</ginput>
+			
+			<!--Nakład-->
+			<ginput 
+				:attribute="product_attr_data.attribute_pa_naklad"
+				:attr_name="'attribute_pa_naklad'"
+				:input_settings="input_settings.attribute_pa_naklad"
+				:value="variation_data.attribute_pa_naklad" :name="'attribute_pa_naklad'">
+			</ginput>
+			
+			<!--Ilość stron czarno białych-->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_ilosc-stron-czarno-bialych']"
+				:attr_name="'attribute_pa_ilosc-stron-czarno-bialych'"
+				:input_settings="input_settings['attribute_pa_ilosc-stron-czarno-bialych']"
+				:value="variation_data['attribute_pa_ilosc-stron-czarno-bialych']" :name="'attribute_pa_ilosc-stron-czarno-bialych'">
+			</ginput>
+			
+			<!--Ilość stron kolorowych -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_ilosc-stron-kolorowych']"
+				:attr_name="'attribute_pa_ilosc-stron-kolorowych'"
+				:input_settings="input_settings['attribute_pa_ilosc-stron-kolorowych']"
+				:value="variation_data['attribute_pa_ilosc-stron-kolorowych']" :name="'attribute_pa_ilosc-stron-kolorowych'">
+			</ginput>
+			
+			<!--Porozrzucane strony kolorowe -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_porozrzucane-str-kolor']"
+				:attr_name="'attribute_pa_porozrzucane-str-kolor'"
+				:input_settings="input_settings['attribute_pa_porozrzucane-str-kolor']"
+				:value="variation_data['attribute_pa_porozrzucane-str-kolor']" :name="'attribute_pa_porozrzucane-str-kolor'">
+			</ginput>
+
+			<!--Numery stron kolorowych -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_numery-stron-kolorowych']"
+				:attr_name="'attribute_pa_numery-stron-kolorowych'"
+				:input_settings="input_settings['attribute_pa_numery-stron-kolorowych']"
+				:value="variation_data['attribute_pa_numery-stron-kolorowych']" :name="'attribute_pa_numery-stron-kolorowych'">
+			</ginput>
+			
+		</section>
+		
+		
+		<section class="cover-info">
+			<h3>Okładka</h3>			
+			
+			<!-- Oprawa -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_oprawa']"
+				:attr_name="'attribute_pa_oprawa'"
+				:input_settings="input_settings['attribute_pa_oprawa']"
+				:value="variation_data['attribute_pa_oprawa']" :name="'attribute_pa_oprawa'">
+			</ginput>
+			
+			
+			<!-- Rodzaj okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_rodzaj-okladki']"
+				:attr_name="'attribute_pa_rodzaj-okladki'"
+				:input_settings="input_settings['attribute_pa_rodzaj-okladki']"
+				:value="variation_data['attribute_pa_rodzaj-okladki']" :name="'attribute_pa_rodzaj-okladki'">
+			</ginput>				
+			
+											
+			<!-- Papier okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_papier-okladki']"
+				:attr_name="'attribute_pa_papier-okladki'"
+				:input_settings="input_settings['attribute_pa_papier-okladki']"
+				:value="variation_data['attribute_pa_papier-okladki']" :name="'attribute_pa_papier-okladki'">
+			</ginput>
+			
+			
+			<!-- Zadruk okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_zadruk-okladki']"
+				:attr_name="'attribute_pa_zadruk-okladki'"
+				:input_settings="input_settings['attribute_pa_zadruk-okladki']"
+				:value="variation_data['attribute_pa_zadruk-okladki']" :name="'attribute_pa_zadruk-okladki'">
+			</ginput>
+			
+			
+			<!-- Uszlachetnienie okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_uszlachetnienie-okladki']"
+				:attr_name="'attribute_pa_uszlachetnienie-okladki'"
+				:input_settings="input_settings['attribute_pa_uszlachetnienie-okladki']"
+				:value="variation_data['attribute_pa_uszlachetnienie-okladki']" :name="'attribute_pa_uszlachetnienie-okladki'">
+			</ginput>
+						
+			
+			<!-- Lakier wybiorczy okładki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_lakier-wybiorczy-okladki']"
+				:attr_name="'attribute_pa_lakier-wybiorczy-okladki'"
+				:input_settings="input_settings['attribute_pa_lakier-wybiorczy-okladki']"
+				:value="variation_data['attribute_pa_lakier-wybiorczy-okladki']" :name="'attribute_pa_lakier-wybiorczy-okladki'">
+			</ginput>
+			
+			
+			<!-- Obwoluta -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_obwoluta']"
+				:attr_name="'attribute_pa_obwoluta'"
+				:input_settings="input_settings['attribute_pa_obwoluta']"
+				:value="variation_data['attribute_pa_obwoluta']" :name="'attribute_pa_obwoluta'">
+			</ginput>			
+
+			
+			
+			
+			
+			
+		</section>
+		
+		
+		<section class="bw-info">
+			<h3>Druk 1+0, 1+1</h3>
+			
+			<!-- Papier 1+1 -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_papier-czarno-bialy']"
+				:attr_name="'attribute_pa_papier-czarno-bialy'"
+				:input_settings="input_settings['attribute_pa_papier-czarno-bialy']"
+				:value="variation_data['attribute_pa_papier-czarno-bialy']" :name="'attribute_pa_papier-czarno-bialy'">
+			</ginput>			
+			
+			<!-- Zadruk cz-b -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_zadruk-strony-czarno-biale']"
+				:attr_name="'attribute_pa_zadruk-strony-czarno-biale'"
+				:input_settings="input_settings['attribute_pa_zadruk-strony-czarno-biale']"
+				:value="variation_data['attribute_pa_zadruk-strony-czarno-biale']" :name="'attribute_pa_zadruk-strony-czarno-biale'">
+			</ginput>
+			
+		</section>
+		
+		
+		<section class="color-info">
+			<h3>Druk 4+0, 4+4</h3>
+			
+			<!-- Papier 1+1 -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_papier-kolor']"
+				:attr_name="'attribute_pa_papier-kolor'"
+				:input_settings="input_settings['attribute_pa_papier-kolor']"
+				:value="variation_data['attribute_pa_papier-kolor']" :name="'attribute_pa_papier-kolor'">
+			</ginput>
+			
+			<!-- Zadruk cz-b -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_zadruk-strony-kolorowe']"
+				:attr_name="'attribute_pa_zadruk-strony-kolorowe'"
+				:input_settings="input_settings['attribute_pa_zadruk-strony-kolorowe']"
+				:value="variation_data['attribute_pa_zadruk-strony-kolorowe']" :name="'attribute_pa_zadruk-strony-kolorowe'">
+			</ginput>
+						
+		</section>
+		
+		
+		<section class="extended-info">
+			<h3>Informacje dodadkowe</h3>
+			
+			
+			<!-- Tytuł książki -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_tytul-ksiazki']"
+				:attr_name="'attribute_pa_tytul-ksiazki'"
+				:input_settings="input_settings['attribute_pa_tytul-ksiazki']"
+				:value="variation_data['attribute_pa_tytul-ksiazki']" :name="'attribute_pa_tytul-ksiazki'">
+			</ginput>
+			
+			<!-- ISBN/ISSN -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_numer-isbnissn']"
+				:attr_name="'attribute_pa_numer-isbnissn'"
+				:input_settings="input_settings['attribute_pa_numer-isbnissn']"
+				:value="variation_data['attribute_pa_numer-isbnissn']" :name="'attribute_pa_numer-isbnissn'">
+			</ginput>
+			
+			<!-- Pakowanie egzemplarzy w folię -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_pakowanie-w-folie']"
+				:attr_name="'attribute_pa_pakowanie-w-folie'"
+				:input_settings="input_settings['attribute_pa_pakowanie-w-folie']"
+				:value="variation_data['attribute_pa_pakowanie-w-folie']" :name="'attribute_pa_pakowanie-w-folie'">
+			</ginput>
+			
+			<!-- Wiercenie otworów -->
+			<ginput 
+				:attribute="product_attr_data['attribute_pa_wiercenie-otworow']"
+				:attr_name="'attribute_pa_wiercenie-otworow'"
+				:input_settings="input_settings['attribute_pa_wiercenie-otworow']"
+				:value="variation_data['attribute_pa_wiercenie-otworow']" :name="'attribute_pa_wiercenie-otworow'">
+			</ginput>
+			
+			
+		</section>
+		
+		
+	
+		
+		
+		
+		
+		<div v-for="(attr, key, index) in product_attr_data" v-if="visible">
+			
+			<!--<ginput :attribute="attr" :attr_name="key" :input_settings="input_settings[key]" :value="variation_data[key]" :name="key"></ginput>	-->
+			
+			
+		
+		
+			
+			
+		</div>
+		
+	
+</div>

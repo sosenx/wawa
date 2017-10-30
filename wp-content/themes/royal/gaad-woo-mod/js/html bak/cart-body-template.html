@@ -1,0 +1,115 @@
+<div class="wawa_cart">
+
+	
+	<div class="header-labels row" v-if="!isEmpty(items)">
+		<div class="col-sm-1" >Lp.</div>					
+		<div class="col-sm-5" >Opis produktu</div>					
+		<div class="col-sm-2" >Nakład</div>
+		<div class="col-sm-2" >Termin wysyłki</div>
+		<div class="col-sm-2" >Koszt</div>
+	</div>
+
+	<div class="empty-cart row" v-if="isEmpty(items)">
+		<div class="col-sm-12 cell empty-cart-notification" >Koszyk jest pusty</div>
+		<div class="col-md-6 col-md-offset-6 submit-bar">			
+			<input type="button" value="Wróć do sklepu" @click="historyBack" >
+		</div>
+	
+	</div>
+	
+	<div class="order-item row" v-for="(item, key, index) in items">
+		
+		<overlay :status="item.overlay"></overlay>	
+		<drop-zone v-bind:drop-zone-item-id="key" :dropzone-enabled="item.dropzone"></drop-zone>
+		
+		
+		<div class="item-tb">
+			<ul>
+				<li>
+					<i v-if="!cart_sett.disable_upload" v-on:click="openAttachmetsAplet( key )" class="fa fa-plus-square" aria-hidden="true"><span>Dodaj pliki</span></i>
+				</li>
+				<li>
+					<i v-if="!cart_sett.disable_trash_item" v-on:click="trashOrderItem( key )" class="fa fa-trash-o" aria-hidden="true"><span>usuń pozycję</span></i>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="lp col-sm-1 cell" >{{ ++index }}</div>					
+		<div class="col-sm-5 cell" >
+			<h3 class="item-title">{{ item.name }}</h3>
+			<div class="pa-list" >	
+				<span class="pa-label" v-for="(pa, pa_key, pa_index) in item.pa_list">
+					<span v-if="pa.slug != 'pa_max_files'" >{{ pa.label }}<span v-if="item.pa_list.length > pa_key + 2" >, </span></span>
+				</span>
+			</div>
+		</div>					
+		<div class="col-sm-2 cell" >{{ item.pa_naklad.replace('-', ' ') }}</div>
+		<div class="col-sm-2 cell" > {{ item.ship_date | parseShipDate }} </div>
+		<div class="col-sm-2 cell" >
+			<span class="v big">{{ item.after_tax }} {{cart_sett.currency_symbol}}</span>
+			<br>
+			<span class="v">({{ item.line_total }} netto)</span>						
+		</div>
+
+		
+		<div v-if="typeof aa[key] == 'object'" class="attachments col-sm-11 col-sm-offset-1">
+			<div class="container-fluid attachments-container">
+				<div class="row ">
+
+					<div class="col-sm-12 legacy-files-upload" v-if="!isAdvancedUpload()">
+						<i class="fa fa-upload" aria-hidden="true"></i>
+
+						<div>
+							<!--<strong>Dodaj pliki:</strong>-->
+							<form action="" method="post" enctype="multipart/form-data">
+								<input type="file" v-bind:name="'file['+key+']'" v-on:change="uploadAttachment(key, $event)">
+							</form> 								
+						</div>
+					</div>
+				</div>	 
+			</div>	
+		</div> 
+		
+		
+		
+		
+		 
+		<div class="attachments col-sm-11 col-sm-offset-1">
+			<div class="container-fluid attachments-container">
+				<div class="row ">
+
+					<div class="col-xs-12 files-bar" >Załączone pliki:</div>
+
+					<div class="attachment-aplet col-md-4 col-lg-3" v-for="attListItem in item.att_list">
+
+						<div class="thumb" v-bind:status="attListItem.attachment_status" v-bind:style="{ 'background-image' : 'url('+ attListItem.th_path.replace(/\.pdf$/,'.jpg') +')' }"></div>
+
+						<ul class="thumb-tb">
+							<li><i v-if="!cart_sett.disable_trash_item_file" @click="deleteFileFromOrderItem( key, attListItem.file_id )" aria-hidden="true" class="fa fa-trash-o trash" title="Usuń plik"></i></li>
+							<li><status-icon v-bind:status="attListItem.attachment_status"></status-icon></li>
+						</ul>
+
+
+
+					</div>
+
+				</div>
+			</div>					 	
+		</div>
+		
+		
+		
+	</div>
+	
+	<cart-total
+		v-if="!isEmpty(items)"
+		ref="cart-total" 
+		:cart_sett="cart_sett"
+		:items="items"
+		:order_total="order_totals"
+		:order_payment="payment"
+		:otype="typeof cart_sett.submit.action != 'undefined' ? cart_sett.submit.action : 'place' "	
+		></cart-total>
+		
+
+</div>

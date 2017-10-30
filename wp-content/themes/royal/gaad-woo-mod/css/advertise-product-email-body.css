@@ -1,0 +1,152 @@
+/* CSS Document */
+/* line 3, advertise-product-email-body.scss */
+.body {
+  background-color: #f1eee9;
+  width: 100%;
+}
+
+/* line 8, advertise-product-email-body.scss */
+table {
+  background-color: #f1eee9;
+  width: 860px;
+  margin: 0 auto;
+}
+/* line 15, advertise-product-email-body.scss */
+table .product_thumbnail {
+  max-width: 300px;
+  margin: 0 auto;
+}
+/* line 20, advertise-product-email-body.scss */
+table .go-to-product-btn {
+  background-color: #FF6600;
+  padding: 15px 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-wight: bold;
+  margin: 20px auto 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 34, advertise-product-email-body.scss */
+table td {
+  font-size: 17px;
+  line-height: 22px;
+  color: #333;
+}
+/* line 49, advertise-product-email-body.scss */
+table .header .logo img {
+  marign: 0 auto;
+  margin: 10px 0 30px 10px;
+}
+/* line 55, advertise-product-email-body.scss */
+table .header .company-data {
+  font-size: 14px;
+  text-align: right;
+  color: #444;
+  padding-left: 15px;
+}
+/* line 61, advertise-product-email-body.scss */
+table .header .company-data p {
+  margin: 0 10px 0 0;
+}
+/* line 65, advertise-product-email-body.scss */
+table .header .company-data .company-name {
+  font-size: 15px;
+}
+/* line 71, advertise-product-email-body.scss */
+table .header .hr {
+  width: 80%;
+  border-bottom: 1px solid #999;
+  margin: 5px 10px 4px 0;
+  display: inline-block;
+}
+/* line 84, advertise-product-email-body.scss */
+table .product-attributes ul li {
+  list-style: none;
+}
+/* line 87, advertise-product-email-body.scss */
+table .product-attributes ul li > * {
+  width: 45%;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 98, advertise-product-email-body.scss */
+table .product-attributes .attr-label {
+  color: #414141;
+  font-weight: bold;
+}
+/* line 104, advertise-product-email-body.scss */
+table .product-attributes .attr-value {
+  color: #333;
+}
+/* line 116, advertise-product-email-body.scss */
+table .text h1 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 0;
+}
+/* line 126, advertise-product-email-body.scss */
+table .text p {
+  margin-left: 10px;
+}
+/* line 133, advertise-product-email-body.scss */
+table p {
+  margin-bottom: 10px;
+}
+/* line 139, advertise-product-email-body.scss */
+table .product-title h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+/* line 149, advertise-product-email-body.scss */
+table .price-wrap {
+  position: relative;
+  margin-left: 24px;
+  padding: 1rem;
+  color: #111;
+}
+/* line 155, advertise-product-email-body.scss */
+table .price-wrap .price_prefix {
+  font-size: 1.1rem;
+}
+/* line 159, advertise-product-email-body.scss */
+table .price-wrap .price_price {
+  font-weight: bold;
+  font-size: 31px;
+}
+/* line 164, advertise-product-email-body.scss */
+table .price-wrap .price_sufix {
+  font-size: 1.1rem;
+}
+/* line 168, advertise-product-email-body.scss */
+table .price-wrap i {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  color: #f2eee9;
+  transform: translate(-1.5rem, -0.1rem);
+  z-index: 10001;
+  position: relative;
+  font-size: 1.1rem;
+}
+/* line 177, advertise-product-email-body.scss */
+table .price-wrap:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 2rem 2rem 2rem 0;
+  border-color: transparent #ff6600;
+  display: block;
+  width: 0;
+  z-index: 1;
+  left: -2rem;
+  top: 0;
+}
+
+/*# sourceMappingURL=advertise-product-email-body.css.map */

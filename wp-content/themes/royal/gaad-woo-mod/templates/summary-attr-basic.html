@@ -1,0 +1,16 @@
+<div id="summary-attr-basic" class="summary-attr-basic">
+
+
+  <ul >
+    <li v-for="(attr_name, key, index) in ov" 
+        v-if="typeof ov == 'object'"
+    >    
+      <span class="l">{{attr_name.label}}</span>
+      <span class="v">{{attr_name.val }} </span>
+    </li>
+
+  </ul>
+
+ 
+  
+</div>

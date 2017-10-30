@@ -1,0 +1,86 @@
+<div id="advertise_product">
+	
+	
+	<div class="advertise-modal-window" v-if="visible">		
+	
+		<div class="form container-fluid">
+		
+			<i class="fa fa-times close-window" aria-hidden="true" @click="closeWindow"></i>
+		
+			<div class="row title">
+			
+				<div class="col-md-12 left-col">									
+					<h2 class="title-el">Poleć produkt znajomemu!</h2>
+				</div>	
+					
+			</div>
+		
+		
+			<div class="row description">
+			
+				<div class="col-md-12 title-col">									
+					<h3>{{ breadcrumbs_model.title }}</h3>		
+				</div>
+			
+			
+				<div class="col-md-6 left-col">					
+					<img v-bind:src="breadcrumbs_model.thumbnail_url" class="breadcrumb-thumbnail"/>			
+					
+					
+					
+					
+				</div>	
+				
+				<div class="col-md-6 right-col">
+					
+					<div class="price-wrap">							
+						<i class="fa fa-certificate" aria-hidden="true"></i>
+
+
+						<span class="price_prefix">Tylko</span>
+						<span class="price_price">{{ price._price }} zł</span>
+						<span class="price_sufix">
+							<span class="separator">za&nbsp;</span>{{ price._quantity }}<span class="separator">&nbsp;szt.</span>
+						</span>
+					</div>						
+				</div>	
+				
+			</div>
+		
+			<div class="row form-fields">
+			
+				<div class="col-md-4 left-col">					
+					<label for="user-name-input">Twoje imię*</label>
+				</div>	
+				<div class="col-md-8 right-col">					
+					<input type="text" name="name" :value="name" @blur="setName($event)">
+					<label for="user-name-input" class="error" v-if="!valid.name && validAll != -1">Podaj swoje imię</label>					
+				</div>
+			
+			</div>	
+			
+						
+			<div class="row form-fields">			
+				<div class="col-md-4 left-col">					
+					<label for="target-email-input">Email znajmego*</label>					
+				</div>	
+				<div class="col-md-8 right-col">					
+					<input type="text" name="email" :value="email" @blur="setEmail($event)">
+					<label for="target-email-input" class="error" v-if="!valid.email && validAll != -1">Podaj właściwy adres email</label>					
+				</div>	
+				
+				
+				
+				<div class="col-md-12 submit-col">					
+					<input type="button" name="send-email" value="Wyślij" @click="sendAdvertisment" >
+				</div>	
+				
+				
+			</div>
+			
+			
+		
+		</div>
+	</div>
+	
+</div>

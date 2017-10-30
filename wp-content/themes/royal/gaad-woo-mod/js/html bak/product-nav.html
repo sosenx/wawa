@@ -1,0 +1,24 @@
+<div class="product-nav">
+
+
+<div class="container-fluid">
+   	<div class="row nav-row">
+   	
+		<div class="col-sm-12">
+
+			<ul class="nav-list">
+				<li v-on:click="changeView('parameters')" v-bind:class="active == 0 ? 'tab-active' : ''">Parametry produktu</li>
+				<li v-on:click="changeView('description')" v-bind:class="active == 1 ? 'tab-active' : ''">Opis</li>
+				<li v-on:click="changeView('templates')" v-bind:class="active == 2 ? 'tab-active' : ''">Przygotowanie do druku / szablony</li>
+				<li v-on:click="changeView('send2friend')" v-bind:class="active == 3 ? 'tab-active' : ''">Poleć znajomemu</li>
+			</ul>	
+
+		</div>
+
+   	
+	</div>
+</div>
+   		
+
+	
+</div>

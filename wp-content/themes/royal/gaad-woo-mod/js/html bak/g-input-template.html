@@ -1,0 +1,98 @@
+<div v-bind:class="[ginput_class, typeof this.input_settings != 'undefined' && typeof this.input_settings.class != 'undefined' ? this.input_settings.class : ''].join(' ')">
+ 
+
+	<!-- Pole checkbox -->
+	<div class="checkbox-holder" v-if="typeof input_settings != 'undefined' && input_settings.type == 'checkbox'">
+		
+		<div class="ginput-header">
+			
+			<div class="input-holder">
+				<label :for="attr_name">{{input_settings.labels.l}}</label>
+				<input type="checkbox" :name="attr_name" @click="checkboxClick( $event )">
+			</div>
+			
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-- Pole text -->
+	<div class="text-holder" v-if="typeof input_settings != 'undefined' && input_settings.type == 'text'">
+		
+		<div class="ginput-header">
+			
+			<div class="input-holder">
+				<label :for="attr_name">{{ input_settings.labels.l }}</label>
+				<input type="text" 
+					v-if="typeof input_settings.unit == 'undefined'"
+					:name="attr_name"					
+					:value="getLabel( value )"
+					@focus="storeCurrentValue( $event )"
+					@click="selectAll( $event )"
+					
+					@keydown="storeCurrentValue( $event )"
+					@blur="setTextValue( $event )"					
+				>
+				<input type="text" class="unit"
+					v-if="typeof input_settings.unit != 'undefined'"
+					:name="attr_name"
+					:unit="input_settings.unit" 
+					:value="getLabel( value )"
+					@focus="storeCurrentValue( $event )"
+					@click="selectAll( $event )"
+					@keydown="storeCurrentValue( $event )"
+					@blur="setTextValue( $event )"					
+				>
+				
+			</div>
+			
+			<div v-if="typeof input_settings.unit != 'undefined'" class="unit-holder">{{ input_settings.unit }}</div>
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-- Pole select -->
+	<div class="select-holder" v-if="typeof input_settings != 'undefined' && input_settings.type == 'select'">
+
+		<div class="ginput-header">
+			
+			<div class="input-holder">
+				<label :for="attr_name">{{input_settings.labels.l}}</label>
+				<input disabled type="text"
+					:name="attr_name"
+					:value="getLabel( value )">
+			</div>
+
+			<i class="fa fa-caret-down drop-down" aria-hidden="true" v-on:click="showOptionsPanel($event)"></i>
+		</div>
+
+
+		<div class="options" v-if="showOptions">
+
+			<div class="option" v-for="(attr_value, key, index) in attribute">
+
+				<div class="predefined-option"
+					 :value="attr_value.slug"
+					 :name="attr_value.name"
+					 v-if="attr_value.slug != 'wlasny-format'" 
+					 @click="setOption( attr_value.slug, $event )">
+					<div class="text">{{ attr_value.name }}</div>
+				</div>
+
+				<div class="custom-option" :value="attr_value.slug" v-if="attr_value.slug == 'wlasny-format' && input_settings.custom_val">
+					<label>Własny format</label>
+					<custom-format-option :input_settings="input_settings" ></custom-format-option>							
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+	
+
+</div>

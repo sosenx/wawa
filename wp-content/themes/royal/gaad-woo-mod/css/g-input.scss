@@ -1,0 +1,330 @@
+/* CSS Document */
+.g-input{
+	position: relative;
+	margin-bottom: 1rem;
+	
+	
+  
+  .error-msg{
+    background-color: red;
+    color: white;
+  }
+  
+    .display-none{
+        display: none;
+      }
+   
+	.ginput-header{ 		
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;	
+			
+			input{ 
+				border: none;
+				box-shadow: none;
+				border-bottom: 1px solid #d3d0cc;
+				padding: 0.4rem 0 0.4rem 0.5rem;
+				line-height: 1rem;
+				height: auto;
+				background: #f2eee9;
+				font-size: 1.3rem;
+				
+				
+			}
+			
+			label{
+				font-weight: bold;					
+			}
+			
+			.drop-down{
+				font-size: 2rem;
+				background: #dfdbd7;
+				width: 3rem;
+				height: 2.7rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid #d3d0cc;
+			}
+			
+		}
+	
+	.text-holder{
+		.input-holder{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			width: 100%;
+				
+				&.unit{
+					width: calc(100% - 4rem);	
+				}
+		}
+		
+		.unit-holder{
+			padding-left: 1rem;
+		}
+	}
+
+  
+  
+  
+	.checkbox-holder{
+		.input-holder{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-start;
+			width: auto;
+      
+     &.unavaible-option{
+        label {
+          color:rgba(152,152,152,1.00);          
+        }
+       input {
+         opacity: .5;
+         
+       }
+      }
+		}
+		
+	}
+		
+	.select-holder{
+		.input-holder{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			width: calc(100% - 2rem);
+		}
+	}
+	
+	.options {		
+		position: absolute;	
+		z-index: 40001;
+		
+		
+		.option {
+			margin-top: .2rem;
+			margin-bottom: .4rem;
+			cursor: default; 
+			
+			
+		}
+	}
+	
+	
+	
+	
+	&.short-50{
+		width: 49%;
+		margin-left: 1%;
+		
+		.ginput-header{ 		
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;	
+			
+			input{
+				width: 55%;
+			}
+		}
+		
+		.text-holder{
+			.input-holder{				
+				flex-direction: row;
+				align-items: baseline;
+				
+				label{
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+	
+	&.inline{
+	
+		
+		.ginput-header{ 		
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;	
+			
+			label {
+				width: 60%;
+			}
+			
+			input{
+				width: 40%;
+			}
+		}
+		
+    
+		.text-holder{
+			.input-holder{				
+				flex-direction: row;
+				align-items: baseline;
+				
+				label{
+					margin-right: 1rem;
+				}
+			}
+		}
+		
+		.select-holder{
+			.input-holder{				
+				flex-direction: row;
+				align-items: baseline;
+				width: calc(100% - 2rem);
+				
+				input {
+					    transform: translateY(-2px);
+              width: calc(100% - 3rem);
+				}
+			}
+		}
+		
+	}
+	
+	
+}
+
+
+@media screen and (min-width:480px){
+	
+}
+
+@media screen and (min-width:480px) and (orientation: landscape){
+	
+}
+
+@media screen and (min-width:768px){
+	
+}
+
+@media screen and (min-width:991px){
+	 .g-input {
+    .options {
+         
+          width: 100%;
+          top: -.5rem;
+          max-width: 30rem;
+          left: calc(100% + 1rem);
+          padding: 1rem;
+          border-radius: 9px;
+          color: white;
+          background-color: #ff6600;
+
+      
+      
+      .option{
+        
+        .text{
+          padding-left: 1rem;padding-left: 1rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: baseline;
+          
+          &:before{
+            content: "\f111";
+            display: inline-block;
+            font: normal normal normal 0.6rem/1 FontAwesome;
+            transform: translate(-0.6rem, -0.3rem);
+            color: rgba(255, 255, 255, 0.72);
+          }
+        }
+        
+        &:hover{
+          background:  rgba(white, .8);
+          color: #666;
+          cursor: pointer;
+        }
+      }
+      
+      .predefined-option{
+        padding: .4rem;
+        
+        
+        
+      }
+      
+    
+      
+      .unavaible-option{
+        color: rgba(255, 255, 255, 0.5);        
+        
+        .text{
+          &:before{
+            content: "\f00d";          
+            font-size: 1.5rem;
+            transform: translateX(-0.9rem);
+          }
+        }
+        
+        &:hover{
+          background-color: transparent!important;
+          
+          .text{
+            color: red;
+            
+            &:before{
+              color: red;
+            }
+            
+          }
+        }
+        
+      }
+      
+      
+      
+      
+      .opanel{
+        h3{
+            
+            font-size: 1.7rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.48);
+            padding-bottom: 0.7rem;
+        }
+      }
+            
+      &:before {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          border-width: 12px 12px 12px 0;
+          border-color: transparent #ff6600;
+          display: block;
+          width: 0;
+          z-index: 1;
+          left: -12px;
+          top: 0.7rem;
+      }
+    }
+    
+           
+    &.two-columns{
+      .options.t-col{
+        max-width: 50rem;
+        width: 180%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;    
+
+        .opanel{
+          width: 100%;  
+        }
+
+        .option{
+          width:50%;
+        }
+        
+      }
+      
+    }
+     
+  }
+}
+
+@media screen and (min-width:1200px){
+	
+}

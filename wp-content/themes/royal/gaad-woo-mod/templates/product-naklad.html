@@ -1,0 +1,71 @@
+<div id="nakladyapp" class="nakladyapp" :class="{ 'is_visible' : visible }">
+	
+	<div class="header" v-if="visible" >
+		<span class="lp">2</span>
+		<span class="label">Wybierz nakład i tryb produkcji</span>
+	</div>
+	
+	<div v-if="blocked" class="loading" :class="{ 'run-loader' : blocked }" 
+    @click="blockInteractions( $event )" >
+	  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>	  
+	</div>
+	
+	<table v-if="visible" :class="{ 'is-blocked' : blocked }">
+		<tbody>
+		  
+			<tr class="icon-labels">
+				<td>&nbsp;</td>
+				<td class="standard">				
+					<span class="fa-stack fa-lg">					  
+					  <i class="fa fa-clock-o fa-stack-2x"></i>
+					  <i class="fa fa-leaf fa-stack-1x"></i>
+					</span>															
+				</td>				
+				<td class="express" v-if="!express_disabled && express_allowed">					
+					<span class="fa-stack fa-lg">					  
+					  <i class="fa fa-clock-o fa-stack-2x"></i>
+					  <i class="fa fa-bolt fa-stack-2x"></i>
+					</span>	
+				</td>
+			</tr>
+		
+			<tr class="price-tr">
+				<td>Nakład</td>
+				<td class="price-header">
+					<strong>Standard</strong><br>
+					<div class="net">cena netto</div>
+					<div class="gro">(cena brutto)</div>
+				</td>
+				<td class="price-header" v-if="!express_disabled && express_allowed">
+					<strong>Ekspress</strong>
+					<div class="net">cena netto</div>
+					<div class="gro">(cena brutto)</div>
+				</td>
+			</tr>
+
+			<tr v-for="( line, key) in q"  class="q-line">
+
+				<td>{{ line._quantity }}</td>
+
+				<td class="standard" :variation_id="line.variation_id">
+				
+				
+				
+					<a @click="showSummary(line.variation_id, $event)">
+						<span class="net">{{ line._regular_price }}</span>
+						<span class="gro">({{ Math.round(line._regular_price * getVat() *100 ) / 100 }} zł)</span>
+					</a>      						
+				</td>
+
+				<td class="express" v-if="!express_disabled && express_allowed" :variation_id="line.express.variation_id">      						
+					<a v-on:click="showSummary(line.express.variation_id, $event)" @click="enableExpress">
+						<span class="net">{{ line.express._regular_price }} zł</span>
+						<span class="gro">({{ Math.round( line.express._regular_price * getVat() *100 ) / 100 }}  zł)</span>
+					</a>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>
